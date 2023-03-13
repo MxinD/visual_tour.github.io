@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广东</title>
+    <link rel="stylesheet" href="./child.css">
+    <style>
+        body{
+            background-image: url(./bg_guangdong.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .wheather{
+            float: left;
+            position: fixed;
+        }
+        .map{
+            float: left;
+            position: fixed; 
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:320px;height:320px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.254029,23.137949);//定义一个中心点坐标
+        map.centerAndZoom(point,8);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+                }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+    </div>
+    <div class="wheather">
+        <div id="he-plugin-standard"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "layout": "1",
+    "width": "320",
+    "height": "320",
+    "background": "1",
+    "dataColor": "FFFFFF",
+    "city": "CN101280101",
+    "key": "7fc2ff9ffbca4d319fbeafcec9b9991a"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+    </div>
+    <div class="pro1 privence" id="广东">
+        <header>
+            <h1>海滨皱鲁，活力之城——广东</h1>
+        </header>
+        <main>
+            <div class="top">
+                <li><img src="./top/01.jpg" alt=""></li>
+                <li><img src="./top/02.jpg" alt=""></li>
+                <li><img src="./top/03.jpg" alt=""></li>
+                <li><img src="./top/04.jpg" alt=""></li>
+                <li><img src="./top/05.jpg" alt=""></li>
+                <li><img src="./top/06.jpg" alt=""></li>
+            </div>
+            <div class="bot">
+                <div class="right">
+                    <h2>南海水域，蓬岛瑶池</h2>
+                    <li>
+                        <img src="./middle/001.jpg" alt="">
+                        <span>东澳岛位于珠海万山群岛中部，植被丰富，沙滩众多，充满了自然古朴的热带海岛风情。你还可以爬上斧担山蜜月阁登高望远，游览建于清朝乾隆年间的古堡铳城，或是在岛上品尝新鲜地道的海鲜。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./middle/002.jpg" alt="">
+                        <span>1997年情人岛与朱家尖架起了一座122米的悬索桥，从此可不再候潮游览。游人行走在悬索桥上，桥下潮流滚滚，很是一番景致。情人岛面积虽然小，只有0.2平方公里，但她却以小巧玲珑和海山奇观展示着自己独特的美。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./middle/003.jpg" alt="">
+                        <span>那琴半岛地质海洋公园位于台山市北陡镇南部海湾上，海岸线绵长，海滩上怪石嶙峋，景色十分奇特。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./middle/004.jpg" alt="">
+                        <span>桑洲岛位于巽寮镇西南部，是一个原生态的海岛，驾车可导航至桑洲岛停车场，然后乘船前往桑洲岛，岛上绿树成荫，是有名的浮潜胜地。
+                        </span>
+                    </li>
+                    <h2>美轮美奂，烟波浩渺</h2>
+                    <li>
+                        <img src="./bottom/01.jpg" alt="">
+                        <span>如果你厌倦了大小梅沙
+
+                            那么这个宝藏小众沙滩或许是你的不错选择。洁白的沙子、唯美的日落深圳沙滩的基本操作它都有但除此之外，海边秋千清澈纯净的玻璃海、环海栈道为其增添独特的美
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./bottom/02.jpg" alt="">
+                        <span>柚柑湾，坐落在深圳第二高峰七娘山下，沙滩山环水抱，环境清幽，堪称真正的“世外桃源”，绝对的人少景美。 典景点之一，省级文明单位、湖南百景单位、潇湘八景之一、长沙“山、水、洲、城”旅游格局的核心要素。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./bottom/03.jpg" alt="">
+                        <span>就算浪花抚过沙滩后，大海也宛如一块晶莹剔透的玻璃，就连水中的一块小石子，也逃不过你的眼睛。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./bottom/04.jpg" alt="">
+                        <span>波光粼粼的海面如同一块“蓝玻璃”，在沙滩上的镜子前看海的倒影，蔚蓝的大海反倒更加迷人。
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../pic.js"></script>
+</body>
+</html>

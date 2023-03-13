@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>英雄模范人物</title>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<style>
+		.close-button {
+			/* border: 3px solid aqua; */
+			background-color: rgb(156, 152, 152);
+		}
+		.meta--full{
+			background-image: url(./img/authors/右背景.jpg);
+			background-size: cover;
+		}
+		.h1_bgc img {
+			width: 305px;
+			height: 900px;
+		}
+
+		.h1_bgc {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url('./img/authors/bg.jpg');
+
+			/*背景图尺寸设置*/
+			background-size: cover;
+			/* cover自适应，这里当然也可以使用像素设置背景图大小*/
+			background-attachment: fixed;
+			/*fixed 定位*/
+			/*如果不加上这句，背景图就会随着浏览器的滚轮的滑动而滑动，
+    加上之后就会定位到body上*/
+		}
+
+		.b1 {
+			width: 400px;
+			height: 900px;
+			overflow-y: scroll;
+			/* 表示在y轴方向加上轮动轴，当子元素个高度大于父元素的时候，滚轮就会触发 */
+			border: 2px solid purple;
+			margin: 0 auto;
+			/* 0 表示上下外边距为 0，auto表示左右外边距自动 */
+
+			background-image: url('./img/02.png');
+			background-size: cover;
+			/* background-size: cover; 表示背景图自适应盒子的大小 */
+
+			background-repeat: no-repeat;
+			/*如果图片太小的话，背景图片就会重复，
+    加上no-repeat 背景图就不会重复*/
+		}
+
+		.b11 {
+			width: 300px;
+			height: 500px;
+			border: 2px solid #aaa;
+			margin: 10px auto;
+		}
+
+		.b12 {
+			width: 300px;
+			height: 600px;
+			border: 2px solid #bfa;
+			margin: 10px auto;
+		}
+
+		.title--preview {
+			color: darkred;
+		}
+
+		.category {
+			color: goldenrod;
+		}
+
+		.dropdown {
+			color: darkred;
+		}
+
+		.content__item {
+			color: aliceblue;
+		}
+
+		.meta__author {
+			color: goldenrod;
+		}
+		.meta__reading-time{
+			color: goldenrod;
+
+		}
+		.meta__date{
+			color: goldenrod;
+		}
+		.fa fa-calendar-o{
+			position: absolute;
+			top: 5cm;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+		<div id="theSidebar" class="sidebar">
+			<div class="h1_bgc">
+				<img src="./img/authors/英雄模范人物2.0.jpg" alt="">
+			</div>
+		</div>
+		<div id="theGrid" class="main">
+			<section class="grid">
+				<header class="top-bar">
+					<h2 class="top-bar__headline">人物介绍
+					</h2>
+					<div class="filter">
+						<span>Filter by:</span>
+						<span class="dropdown">Popular</span>
+					</div>
+				</header>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">中国共产主义运动的先驱
+					</h2>
+
+					<div class="loader"></div>
+					<span class="category"> 李大钊</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/李大钊.jpg" alt="author04" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 66</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.28</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">血铸太行的民族英雄</h2>
+					<div class="loader"></div>
+					<span class="category">左权</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/左权.jpg" alt="author05" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 52</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.8.18</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">共产党的第一任总司令</h2>
+					<div class="loader"></div>
+					<span class="category">叶挺</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/叶挺.jpg" alt="author01" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 71</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.17</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview"> 第一民族英雄</h2>
+					<div class="loader"></div>
+					<span class="category">杨靖宇</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/杨靖宇.jpg" alt="author02" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 55</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.2</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">楚天英杰天山魂</h2>
+					<div class="loader"></div>
+					<span class="category">陈谭秋</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/陈潭秋.jpg" alt="author03" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 62</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.16</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">宁死不屈 浩气长存</h2>
+					<div class="loader"></div>
+					<span class="category">邓恩铭</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/邓恩铭.jpg" alt="author06" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 58</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.11.2</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">伟大的马克思主义者</h2>
+					<div class="loader"></div>
+					<span class="category">瞿秋白</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/瞿秋白.jpg" alt="author07" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 68</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.11</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">侦察战斗英雄</h2>
+					<div class="loader"></div>
+					<span class="category">杨子荣</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/杨子荣.jpg" alt="author08" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 55</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.23</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview"> 人民音乐家</h2>
+					<div class="loader"></div>
+					<span class="category">冼星海</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/冼星海.jpg" alt="author01" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 70</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.5</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">甘为孺子牛的“民族魂”</h2>
+					<div class="loader"></div>
+					<span class="category">鲁迅</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/鲁迅.jpg" alt="author02" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 59</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.21</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">伟大的共产主义战士</h2>
+					<div class="loader"></div>
+					<span class="category">白求恩</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/白求恩.jpg" alt="author03" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 77</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.9.22</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">“尽善尽美唯解放”</h2>
+					<div class="loader"></div>
+					<span class="category">王尽美</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/王尽美.jpg" alt="author04" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 72</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.28</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">遵义城下洒热血</h2>
+					<div class="loader"></div>
+					<span class="category">邓萍</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/邓萍.jpg" alt="author01" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 49</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.6</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">生是为中国 死是为中国</h2>
+					<div class="loader"></div>
+					<span class="category">刘伯坚</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/刘伯坚.jpg" alt="author02" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 55</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.2</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">生的伟大 死的光荣</h2>
+					<div class="loader"></div>
+					<span class="category">刘胡兰</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/刘胡兰.jpg" alt="author03" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 62</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.29</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">化作红梅映山红</h2>
+					<div class="loader"></div>
+					<span class="category">江竹筠</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/江竹筠.jpg" alt="author04" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 44</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.21/span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">让红色电波永不消逝的人</h2>
+					<div class="loader"></div>
+					<span class="category">李白</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/李白.jpg" alt="author05" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 49</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.11</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">红色的资本家</h2>
+					<div class="loader"></div>
+					<span class="category">陈佳庚</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/陈佳庚.jpg" alt="author06" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 55</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.30</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">甘将热血沃中华</h2>
+					<div class="loader"></div>
+					<span class="category">赵一曼</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/赵一曼.jpg" alt="author07" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 72</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.9.18</span>
+					</div>
+				</a>
+				<a class="grid__item" href="#">
+					<h2 class="title title--preview">正气长存的民主战士</h2>
+					<div class="loader"></div>
+					<span class="category">闻一多</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/闻一多.jpg" alt="author08" />
+						<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 55</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.24</span>
+					</div>
+				</a>
+				<footer class="page-meta">
+					<span>Load more...</span>
+				</footer>
+			</section>
+			<section class="content">
+				<div class="scroll-wrap">
+					<article class="content__item">
+						<span class="category category--full">播火者</span>
+						<h2 class="title title--full">中国共产主义运动的先驱</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/李大钊.jpg" alt="author04" />
+							<span class="meta__author">李大钊</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 66</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.28</span>
+						</div>
+						<p>&emsp;李大钊率先在中国传播马克思主义并作出历史性贡献:一是学习和接受马克思主义后成为中国最早的马克思主义传播者;二是系统研究马克思主义，在北京大学等高校开设课程，为中国革命事业培养了第一代马克思主义骨干人才;三是运用马克思主义来探索中国的实际问题，把中国引向社会主义道路。
+						</p>
+						<p>&emsp;李大钊在青年时代目睹了帝国主义侵略下的国家危亡局势和社会黑暗状况，立志要为苦难的中国寻求出路。1913—1916年间，李大钊在日本东京早稻田大学留学，开始阅读社会主义和马克思主义学说。社会主义和马克思主义学说在日本传播较早，1904—1905年《共产党宣言》日译本开始出版。李大钊在日本留学期间，京都帝国大学经济学教授河上肇已经将马克思的《资本论》翻译成日文，这使李大钊能够接触到马克思原着、学习马克思主义。
+						</p>
+						<p>&emsp;俄国二月革命发生后，李大钊写了《俄国革命之远因近因》《面包与和平运动》《俄国共和政府之成立及其政纲》《俄国大革命之影响》《大战中欧洲各国之政变》等文章，在介绍俄国革命的同时，称俄国革命是「和平之曙光」，代表「国外政治之潮流」。俄国十月革命胜利后，李大钊开始深刻认识它的价值和意义。1919年元旦，李大钊在《每周评论》第3号上发表《新纪元》指出俄国十月革命对中国的影响:「我们在这黑暗的中国，死寂的北京，也仿佛分得那曙光的一线，好比在沉沉深夜中得一个小小的明星，照见新人生的道路。」
+						</p>
+						<p>&emsp;从1919年初开始，李大钊对马克思主义学说的认识逐渐加深。他在当年2月发表的《战后之妇人问题》虽然谈的是妇女问题，但是已经明确表达了全世界无产阶级联合起来的思想，他认为:「妇人问题彻底解决的办法，一方面是合妇人全体的力量，去打破那男子专断的社会制度;一方面还要合世界无产阶级妇人的力量，去打破那有产阶级（包括男女）专断的社会制度。」这表达了李大钊运用阶级斗争的手段推翻剥削制度的马克思主义观点。
+						</p>
+						<p>&emsp;李大钊研究马克思主义，不是仅停留在理论探讨即一般学术和伦理道德问题的研究上，而是更进一步，将之运用于解决中国现实问题上，用于探索中国发展道路上。</p>
+						<p>&emsp;1921年3月20日，李大钊在《评论之评论》第1卷第2号上发表《中国的社会主义与世界的资本主义》，阐明了中国只有用社会主义方式才能发展实业的看法。他认为，西方发达国家的经济组织已经出现严重问题，劳资矛盾突出，劳工运动日盛一日，风起云涌，资本主义制度受到怀疑和批判，世界已经开始由资本主义向社会主义方向发展。同时，西方国家已经「由自由竞争，发达到必须社会主义共营地位」，如果中国还按部就班地按西方曾经走过的老路亦步亦趋地重走一遍，那么，「人家已走远了几千万里，我们尚在初步」，什么时候才能赶上发达国家?什么时候才能摆脱贫穷落后乃至亡国灭种的危险局面?中华民族要存立于世界强国之林，「恐非取兼程并力社会共营的组织，不能有成。」
+						</p>
+						<p>&emsp;鸦片战争以来，中华民族逐步濒临亡国灭种的危险，诸多仁人志士为反抗侵略、挽救危亡、复兴民族，试图从西方国家寻找真理。他们先后从西方理论宝库中找来18、19世纪的一些理论和学说，但是却迟迟没有发现1848年就已经正式在欧洲诞生的马克思主义学说。也正因为如此，从1840年至五四运动前夕，在长达80年的时间里，尽管他们前仆后继、英勇不屈，却由于没有科学理论做指导，所有这些挽救危亡的努力和奋斗，最终都因帝国主义和封建势力的联手绞杀而失败。
+						</p>
+						<p>&emsp;在这样的历史背景下，李大钊率先举起马克思主义的旗帜，用马克思主义唯物史观来考察中国历史的发展进程，探究近代中国国运变动的原因，得出两个重大发现:一是发现「中国今日扰乱之本原，全由于欧洲现代工业勃兴，形成帝国主义，而以其经济势力压迫吾产业落后之国家，用种种不平等条约束制吾法权、税权之独立与自主，而吾之国民经济，遂以江河日下之势而趋于破产」。二是发现要改变这种局面，中国除了用革命手段废除中外间的不平等条约以恢复中国在国际上的「自由平等之位置」外，还必须采用社会主义。这使得中国人对于自己的命运及未来发展的必然趋势有了科学认识，知道无论面前多么艰难险阻，中华民族独立、解放、复兴的伟大事业必将成功!正是由于找到了马克思主义这一科学真理并用其解释和指导中国历史进程，「中国的面目就起了变化」「中国人从思想到生活才出现了一个崭新的时期」。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">闪亮的坐标</span>
+						<h2 class="title title--full">血铸太行的民族英雄</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/左权.jpg" alt="author05" />
+							<span class="meta__author">左权</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 52</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.8.18</span>
+						</div>
+						<p>&emsp;湖南省醴陵市烈士陵园内，左权将军纪念碑高高耸立，格外庄严肃穆，前来缅怀左权将军的社会各界人士络绎不绝 </p>
+						<p>&emsp;1905年，左权出生在湖南省醴陵县（今醴陵市）的一个农民家庭，1924年入黄埔军校一期学习，1925年加入中国共产党，后在黄埔军校教导团任排长、连长，参加了讨伐陈炯明的两次东征。
+						</p>
+						<p>&emsp;1925年12月赴苏联学习，先在莫斯科中山大学学习，后转入伏龙芝军事学院深造，1930年回国后到中央苏区工作。 </p>
+						<p>&emsp;1934年10月，左权参加长征，参与了指挥强渡大渡河、攻打腊子口等战斗。1936年，左权担任红一军团代理军团长，率部西征并参与指挥山城堡战役。</p>
+						<p>&emsp;抗日战争爆发后，他担任八路军副参谋长、八路军前方总部参谋长，后兼任八路军第二总队司令员，协助朱德、彭德怀指挥八路军开赴华北抗日前线，粉碎日伪军“扫荡”，取得了百团大战、黄崖洞保卫战等战役的胜利，威震敌后。
+						</p>
+						<p>&emsp;1937年8月，左权随朱德、彭德怀率部东渡黄河，挺进华北，开辟抗日根据地。随后几年，一直任八路军前方总部参谋长。</p>
+						<p>&emsp;担任过左权警卫员的陈利财这样回忆左权繁忙而紧张的战斗生活，“他每天工作在16个小时以上……有时，我们走进他住房给他倒上一杯开水，他都没有发觉。我们经常见他由于熬夜而累得两眼通红。”
+						</p>
+						<p>&emsp;1939年春天起，为提高部队的军政素质，左权先后3次协助八路军总部进行整军。他还组织总部巡视团到冀南、冀鲁豫等根据地，帮助部队开办短期集训班，传播和交流经验，培养干部。
+						</p>
+						<p>&emsp;左权“不但谋兵，而且谋粮”。1940年冬，八路军首次召开了后勤工作会议，会上左权作了题为《论我军的后勤建设》的报告。他亲手在山西黎城县创建了黄崖洞枪炮厂，这是太行山区最大的兵工厂，不但生产“太行造”步枪，还生产炮弹和掷弹筒。朱德说他是“大事不悸，小事不忽”。
+						</p>
+						<p>&emsp;繁忙的工作之外，左权坚持学习钻研军事教材、研究中日战争的特点和规律等。他将自己亲身经历的每一场战役写出总结经验，撰写了《论坚持华北抗战》《埋伏战术》《袭击战术》《战术问题》《论军事思想的原理》等40多篇文章，被作为部队训练的教材。左权为创建并巩固华北抗日根据地，发展壮大人民抗日武装，为八路军的全面建设，建立了不朽的功勋。
+						</p>
+						<p>&emsp;1942年5月，日军对太行抗日根据地发动大“扫荡”。25日，左权在山西辽县麻田附近指挥部队掩护中共中央北方局和八路军总部等机关突围转移，不幸牺牲，年仅37岁。</p>
+						<p>&emsp;左权是八路军在抗日战场上牺牲的最高指挥员，延安和太行山根据地为其举行追悼会。周恩来称他为“足以为党之模范”，朱德赞誉他是“中国军事界不可多得的人才”。为纪念左权，晋冀鲁豫边区政府决定将其牺牲地辽县改名为左权县。
+						</p>
+						<p>&emsp;英雄不朽，光芒长存。左权镇、左权路、左权红军小学……在左权将军的家乡醴陵，人们以各种方式寄托对左权的深情缅怀，传承红色基因、赓续红色血脉。</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">共产党的第一任总司令</span>
+						<h2 class="title title--full">在烈火与热血中永生</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/叶挺.jpg" alt="author01" />
+							<span class="meta__author">叶挺</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 71</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.17</span>
+						</div>
+						<p>&emsp;“我希望在烈火与热血中得到永生”“为中国人民解放事业贡献我的一切”……今年4月初起，叶挺将军纪念园首次集中展出叶挺12封家书信件手札，让所有参观者感动。</p>
+						<p>&emsp;叶挺独立团将领曹渊之孙曹海潮含泪表示，从这些家书中，更深切地体会到革命先辈的崇高气节与伟大精神；叶挺独立团的铁军精神在军队建设中起到了重要作用，也是今天经济建设和社会建设必不可少的精神。
+						</p>
+						<p>&emsp;叶挺纪念馆位于广东省惠州市惠阳区，刚刚完成数字化展升级，展厅融合动态影像、三维数据采集和展示、雷达感应、互动触控、光影油墨等多种技术，打造出“无实物、场景化、重交互”的参观模式，引领人们如临其境地回顾叶挺波澜壮阔、铁骨铮铮的一生。
+						</p>
+						<p>&emsp;叶挺原名叶为询，1896年出身于广东惠州农家，启蒙老师陈敬如为其改名“叶挺”，意为“人要上行、叶要上挺”，有挺身而出、拯救中华之期冀。</p>
+						<p>&emsp;叶挺先后就读于广东陆军小学、湖北陆军第二预备学校和河北保定陆军军官学校。1917年，他在《新青年》上发表长信，抒发“振污世，起衰弱”之志。</p>
+						<p>&emsp;1924年，叶挺前往苏联学习，同年10月加入中国社会主义青年团，12月加入中国共产党。1925年回国后，叶挺任国民革命军第四军参谋处长，后改任独立团团长，参加北伐战争。他带领独立团进攸县、打醴陵、克平江、夺汀泗、取咸宁、占贺胜、陷武昌，战无不胜，攻无不克，“铁军”威名由此远播，“北伐名将”享誉中外。
+						</p>
+						<p>&emsp;革命危急关头，1927年8月，南昌起义号角吹响，叶挺任前敌总指挥；同年12月，参与领导广州起义，成为首位工农红军总司令。起义失败后，他漂泊海外。</p>
+						<p>&emsp;1937年抗战全面爆发，中华民族生死存亡之际，根据党的指示，叶挺亲自组建和领导新四军驰骋大江南北，再展“铁军”雄风。1940年，叶挺率部取得反扫荡重大胜利，被各界称为“中华民族的干城”。
+						</p>
+						<p>&emsp;1941年，皖南事变震惊中外，叶挺谈判时被非法扣押，先后被囚于江西上饶、广西桂林等地。被囚5年多，叶挺不惧国民党威逼利诱，写信表示“个人之操守至死不可变”；并作《囚歌》明志，誓言“在烈火和热血中得到永生”。
+						</p>
+						<p>&emsp;1946年3月，叶挺终于获释。出狱后第二天即致电党中央，希望重入中国共产党。中共中央复电，称赞叶挺忠诚地为中国民族解放与人民解放事业进行了20余年的奋斗，经历了种种严重的考验，决定接受叶挺重新加入中国共产党。4月8日，因飞机失事，叶挺在山西兴县黑茶山遇难，遗体葬于延安“四·八”烈士陵园。
+						</p>
+						<p>&emsp;叶挺将军纪念园内，策马奋战、铁骨铮铮的将军雕像静静矗立，守望着祖国大好河山；铿锵有力的入党宣誓、饱含深情的家书朗诵、满腔热血的青春歌咏常常萦回于此。</p>
+						<p>&emsp;叶挺纪念馆讲解员陈婷说，他们将探索更多情景教育模式，让观众更好感悟和学习“铁军精神”，坚定理想信念，迸发追求美好生活的激情。</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">第一民族英雄</span>
+						<h2 class="title title--full"> 民族多少事，志士急断肠</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/杨靖宇.jpg" alt="author02" />
+							<span class="meta__author">杨靖宇</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 55</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.2</span>
+						</div>
+						<p>&emsp;杨靖宇（1905—1940)，着名抗日英雄，原名马尚德。他出生在河南省确山县古城乡李湾村一个贫困农民家庭，5岁丧父，8岁靠叔父资助进入本村私塾读书，1918年以优异成绩考入确山县立第一高等小学堂。1919年，五四运动席卷全国，年仅14岁的杨靖宇投身到火热斗争中。1926年，杨靖宇加入中国共产主义青年团。1927年4月，他奉党团组织的指示，领导了震惊中外的豫南农民起义，即「确山暴动」，组织5万农民武装围攻确山县城，经过4天的激战，歼敌1个旅，占领了县城，建立了党领导的人民政权。
+						</p>
+						<p>&emsp;当国民党反动派发动「四一二」反革命政变，无数共产党人和革命志士惨遭杀害之际，杨靖宇于1927年6月毅然加入中国共产党，成为一名坚定的共产主义战士。9月30日，他和李鸣岐等领导了刘店秋收起义，重新组织被国民党破坏了的中共确山县委员会，并成立了中国工农红军豫南游击队，威震豫南。这期间他的家曾5次被抄，房屋被烧，母亲和妻儿为逃避敌人追捕四处躲藏，为此杨靖宇为刚出生的女儿取名「躲儿」。1927年冬初，杨靖宇调往河南省委工作，在此期间先后3次被捕入狱。1929年8月，杨靖宇被派到抚顺任特别支部书记。他化名张贯一，表示「一以贯之」坚持革命不动摇。在抚顺时，他因领导当地矿工罢工，先后2次被捕入狱。在5次入狱中，他遭受了敌人的各种严刑拷打，始终没有吐露半点党的机密。
+						</p>
+						<p>&emsp;1932年11月，杨靖宇被派往南满领导抗日工作。他组建了中国工农红军第三十二军南满游击队，领导部队运用灵活机动的游击战术，粉碎了敌人4次围攻，并在不到5个月的时间里，进行大小战斗60余次，打死、打伤日伪军13C余人，缴获许多武器弹药。游击队声威遍及南满。
+						</p>
+						<p>&emsp;九—八事变后，杨靖宇从南满实际出发，明确提出动员一切反日力量，联合抗日。1934年2月21日，在临江县三岔子，杨靖宇领导的南满游击队与其他16支抗日部队联合起来，成立了抗日联军总指挥部，杨靖宇被推举为总指挥。1934年11月，抗日联军正式扩编为东北人民革命军第一军。
+						</p>
+						<p>&emsp;1938年起，日本关东军司令部调动日伪军警6万余人，对杨靖宇及抗联一路军进行「大讨伐」，采取收买汉奸、政治诱降等方式，对抗联进行分化瓦解。至此，东北抗日武装斗争进入极端艰难的时期。
+						</p>
+						<p>&emsp;1940年2月，在日伪军疯狂的「追剿」下，杨靖宇身边只剩几名战士，粮尽援绝。23日，已经孤身与敌人周旋几昼夜的杨靖宇在吉林蒙江三道崴子壮烈牺牲，时年35岁。</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">楚天英杰天山魂</span>
+						<h2 class="title title--full">血沃天山的“一大代表”</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/陈潭秋.jpg" alt="author03" />
+							<span class="meta__author">陈潭秋</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 62</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.16</span>
+						</div>
+						<p>&emsp;陈潭秋，生于1896年湖北黄冈人。1916年，陈潭秋考入武昌高等师范学校英语部学习，开始接触和宣传马克思主义。1920年秋，陈潭秋和董必武等在武汉成立共产党早期组织，是中国共产党最早的党员之一。
+						</p>
+						<p>&emsp;1921年7月，陈潭秋以武汉共产主义小组代表的身份参加了在上海召开的中国共产党第一次全国代表大会。在会上，陈潭秋兴奋地欢呼：“我党不仅是中国无产阶级的先锋队，而且是全民族和全中国人民的领袖。”此后，陈潭秋先后任中共湖北区委组织部主任、江西省委书记、满洲省委书记、江苏省委秘书长、福建省委书记、中央政府粮食部部长等职。
+						</p>
+						<p>&emsp;942年，陈潭秋在新疆工作时，军阀盛世才公开走上反苏反共道路。党中央同意在新疆工作的共产党员全部撤离。陈潭秋把自己列入最后一批，表示：“只要还有一个同志，我就不能走。”同年9月17日，陈潭秋被捕。
+						</p>
+						<p>&emsp;中共中央获悉陈潭秋等被捕后，立即组织营救。陈潭秋则在狱中与敌人做坚决斗争。敌人初则动用“坐飞机”“压大杠”“灌辣椒水”等酷刑，妄图通过肉体折磨逼迫他低头，但陈潭秋始终铁骨铮铮。一计不成，敌人又采用“车轮战术”展开连续数十天毫不间断的疲劳审讯，意图使他精神崩溃；为了防止极度劳累的陈潭秋合眼，丧失人性的敌人竟使用烈性阿姆尼亚不断刺激他，但陈潭秋始终坚贞不屈。残忍的折磨不起作用，敌人又换上假惺惺的面孔，企图劝诱陈潭秋签署所谓的“脱党声明”，被他严词拒绝。陈潭秋的坚贞不屈，令敌人大出意外，他们难以想象一个人何以在如此非人的折磨下坚持信仰毫不动摇。狱中看守也不得不对陈潭秋发出赞叹：“你们共产党员亚克西！”
+						</p>
+						<p>&emsp;坚贞不屈的陈潭秋让敌人束手无策。1943年9月27日，盛世才签发了对陈潭秋的秘密处决令。当日深夜，陈潭秋被杀害于狱中，时年47岁。</p>
+						<p>&emsp;陈潭秋同志牺牲的消息一直不为人所知。直到1945年4月，党的第七次全国代表大会上，陈潭秋还被推选为中央委员。代表们没想到，陈潭秋早已为革命事业而献身。</p>
+						<p>&emsp;陈潭秋是中国共产党的创始人之一，是杰出的无产阶级革命家，他在20多年的革命生涯中舍生忘死、奋斗不息，为中国人民的解放事业作出了重大贡献，展现了中国共产党人的优秀品格和崇高精神。周恩来称赞他“胸怀坦荡，始终坚持布尔什维克的立场，对党一心一意，从不动摇对革命的信念”。可以说是对陈潭秋最为贴切的评价！陈潭秋曾说：“我死后要化作一抔黄土，铺在通向胜利的路上。”诚如斯言，他将自己的一切乃至生命奉献给了人民，他的感人事迹在中国革命史上留下了深深的烙印！
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">“宁死不屈，浩气长存”</span>
+						<h2 class="title title--full">播撒红船火种的革命先驱</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/邓恩铭.jpg" alt="author06" />
+							<span class="meta__author">邓恩铭</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 58</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.11.2</span>
+						</div>
+						<p>&emsp;1901年1月5日，邓恩铭出生在贵州省荔波县水浦寨的一个水族农民家庭。1917年9月，16岁的邓恩铭赴山东济南求学。当时的山东由北洋军阀执政，政治腐败，战乱连年，加上日本帝国主义借口第一次世界大战对德宣战，在青岛设立行政总署，在济南等地设立行政公署，把山东变成了自己的半殖民地。山东内忧外患，矛盾冲突激烈，邓恩铭看在眼里，忧在心中。
+						</p>
+						<p>&emsp;1919年，轰轰烈烈的五四运动爆发，邓恩铭所在的山东省立一中成立了学生自治会，组织领导全校的学生运动。邓恩铭积极参加学生自治会的工作，编印散发传单，走上街头讲演，参加抵制日货运动，并到各校组织联络，结识了一批学生运动的中坚力量，如山东省立第一师范的学生代表王尽美等人。
+						</p>
+						<p>&emsp;五四运动后，俄国十月革命和马克思主义思潮迅速在济南和山东各地传播，邓恩铭逐渐成长为一个具有共产主义思想的革命者。1920年夏秋期间，邓恩铭和王尽美为了推动马克思主义在山东的传播，联络一批进步青年知识分子，秘密建立「济南康米尼斯特学会」(济南共产主义学会)，并发起组织研究革命理论的励新学会，创办了《励新》杂志，使之成为济南宣传新思想新文化、传播马克思主义、启迪青年的重要阵地。第二年春天，在北京、上海党组织的影响和帮助下，邓恩铭和王尽美等人在济南发起成立了早期共产党组织，到中共一大召开前，成员已发展到8人。同时，山东省第一个工会组织——大槐树机厂工人俱乐部也宣布成立。马克思主义与工人运动相结合，奠定了日后大槐树机厂、济南乃至山东全省工人运动的基础。
+						</p>
+						<p>&emsp;1921年7月，邓恩铭参加中共一大时，尚不满20岁，是与会代表中唯一的少数民族代表。1922年1月21日，邓恩铭作为济南共产党早期组织的代表，远赴莫斯科参加远东各国共产党和民族革命团体第一次代表大会。1923年4月，邓恩铭受党组织派遣到青岛开展革命活动。他利用自己《胶澳日报》副刊编辑的职务，在青岛报刊中首次公开宣传马克思主义。同年8月，邓恩铭筹备建立了青岛第一个共产党组织，随后，社会主义青年团青岛支部宣布成立。邓恩铭不遗余力地发展党团员，壮大党组织，通过发行刊物、创办书社、开办图书馆等方法，扩大马克思主义在青岛的传播，并建立了青岛第一个工会组织，领导了胶济铁路工人大罢工、四方机厂工人大罢工、青岛纱厂工人大罢工等，推动青岛工人运动走向高潮。
+						</p>
+						<p>&emsp;在青岛纱厂工人第一次大罢工运动中，邓恩铭亲自起草大康纱厂全体工人《泣告书》，揭露日本厂主的残酷统治，控诉工人的悲催遭遇，引发社会各界人士的援助。大罢工坚持了22天，迫使日本厂主签字同意了包括改善工人待遇、不殴打辱骂工人等9项复工条件。
+						</p>
+						<p>&emsp;1925年8月，邓恩铭任中共山东地委书记，后又任中共山东区委委员。1927年春，邓恩铭赴武汉向党中央汇报山东党的工作，并出席了在武汉召开的中国共产党第五次全国代表大会，应邀在毛泽东主办的农民运动讲习所里讲课。
+						</p>
+						<p></p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">伟大的马克思主义者</span>
+						<h2 class="title title--full">信仰之花常开不败</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/瞿秋白.jpg" alt="author07" />
+							<span class="meta__author">瞿秋白</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 68</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.11</span>
+						</div>
+						<p>&emsp;瞿秋白同志牺牲于长汀，但是他的革命精神永留于长汀。”在福建龙岩市长汀县博物馆内的瞿秋白关押处，讲解员李艳斌告诉记者：“当时这里是国民党三十六师师部。瞿秋白人生中的最后一段时光就在这度过，总共关押了41天。”
+						</p>
+						<p>&emsp;瞿秋白是留守苏区继续进行战斗的中国共产党早期领袖之一。1934年10月，王明等“左”倾错误的领导导致第五次反“围剿”失败，中央红军被迫进行战略转移，瞿秋白则留守苏区坚持游击战争。1935年初，由于瞿秋白肺病加重，中央决定送他到上海就医，途经长汀濯田梅迳村被国民党保安团俘虏，被押往上杭县保安团监狱。他称自己是个医生，名叫林琪祥。虽受拷打审问，却未暴露身份。后来由于叛徒出卖，他被当作“共党要犯”，于同年5月9日从上杭用船押送到长汀，关押在当时的国民党三十六师师部。国民党中央党部先后派陈建中、王杰夫等劝降，都遭到瞿秋白的严词拒绝。他在狱中写了许多诗词，刻了许多印章，甚至解剖自己，无所畏惧地写下了2万余字的遗著《多余的话》。。
+						</p>
+						<p>&emsp;1935年6月18日上午，面对“枪决密电”的瞿秋白，镇定自若地写下“夕阳明灭乱山中，落叶寒泉听不穷，已忍伶俜十年事，心持半偈万缘空”的诗作。随后在国民党卫兵的押送下，从中山公园一边用俄语唱《国际歌》，一边走到长汀西门罗汉岭，盘膝坐在草地上，对士兵微笑点头“此地甚好”，而后从容赴死，年仅36岁。
+						</p>
+						<p>&emsp;这样一位笑对生死的共产党员，把信仰刻画成从容而壮烈的诗歌。如今，在瞿秋白关押处的院子里，有株陪伴过他的石榴树。每年夏天，石榴花盛开，满树火红，好像是对革命先烈深深的怀念，更像是他所代表的共产党人的信仰，常开不败。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">侦察战斗英雄</span>
+						<h2 class="title title--full">如同西方的英雄佐罗</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/杨子荣.jpg" alt="author08" />
+							<span class="meta__author">杨子荣</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 55</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.23</span>
+						</div>
+						<p“天王盖地虎，宝塔镇河妖”…… </p>
+							<p>&emsp;侦察英雄杨子荣孤身入匪巢，智取威虎山的传奇故事，随着电影《林海雪原》广为人知，这句对白更是被口口相传，成为一个时代的印迹。</p>
+							<p>&emsp;而比电影更传奇的是现实生活。杨子荣这个角色的原型杨宗贵在真实的剿匪战争中，没费一枪一弹，只带了几个助手，就把座山雕押下了山。他侦察时的大智大勇，身世的扑朔迷离，都为他蒙上了一层传奇色彩。
+							</p>
+							<p>&emsp;杨子荣，原名杨宗贵，1917年1月28日出生于山东省牟平县（今烟台市牟平区）。父亲杨世恩是泥瓦匠，母亲宋学芝是农家妇女。夫妇生有三男三女，两个早夭。杨宗福是杨世恩长子，杨子荣是杨世恩次子。
+
+							</p>
+							<p>&emsp;杨子荣4岁那年，家里饥寒交迫，无法度日。这年秋天，全家决定闯关东另谋生路。全家定居辽宁安东（今丹东）郊外的大沙河村。然而安东的生活也不如意，杨世恩夫妇每天从早到晚拼命地干活，也难以维持全家人的温饱。
+							</p>
+							<p>&emsp;无奈之下，杨世恩夫妇决定各领几个孩子分开活命。杨世恩与大女儿留在安东，宋学芝带着几个孩子回山东。尽管生活困难，宋学芝还是省吃俭用供杨子荣读了4年书。</p>
+							<p>&emsp;1929年，杨子荣在母亲的安排下，独自去安东投靠父亲。开始，父亲让他上学。两年后，家中日子过得实在艰难，杨子荣到姐姐做工的缫丝厂当童工，挣钱补贴家用。3年学徒期刚满时，因工厂效益不好，杨子荣失业了。后来，杨子荣在岫岩一带干了不到三个月的缫丝工人。不久，他又回到安东。
+							</p>
+							<p>&emsp;在安东，杨子荣采过石头，伐过树木，有时也被人找去挖石洞。到了1935年，他到鸭绿江上当船工，在码头上扛大包、放木排，在江岸上拉纤，从事着繁重的劳动。也正是在这个时期，杨子荣熟悉了安东的山川地貌、风土人情，也接触到三教九流、行帮黑道各色各样的人，熟悉了他们的种种规则，甚至对土匪、地痞的暗语、黑话，都了如指掌。这段经历，为他后来参军当上侦察员起了重要作用。
+							</p>
+							<p>&emsp;灭了“座山雕”，剿匪任务并没有结束。1947年2月20日，杨子荣又领了新任务。这次是清剿土匪刘俊章、丁焕章和郑三炮。23日，杨子荣和几个侦察员向土匪所在的屋内猛扑过去。慌乱中的土匪开始操枪，杨子荣立即扣动扳机，可能是天气太冷枪栓受冻，枪没有打响。这时，从屋内射出一颗子弹正好打中了杨子荣的胸膛，杨子荣晃了几晃，便倒了下去。开枪的土匪见打中人了，吓得扔下枪冲出门逃走了。杨子荣倒下后，战友们爬上屋顶，揭开房盖，向屋内扔手榴弹，终于把这股顽匪消灭干净。
+							</p>
+							<p>&emsp;1974年，侦察英雄杨子荣牺牲27年后，他在东北屡建奇功的英灵终于回到了故乡山东，回到了母亲和妻子的身边。作为英雄至死眷恋着的家乡，牟平人民几十年来一直崇敬着自己的英雄：在端午山牟平革命烈士纪念馆设有杨子荣纪念专区、在城区中心建设了杨子荣广场、在雷神庙旁革命教育基地辟有简易的杨子荣纪念馆，在牟平，杨子荣的名字耳熟能详，杨子荣的事迹人人传扬。
+							</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">人民音乐家</span>
+						<h2 class="title title--full">真正的人民音乐家，中国的贝多芬</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/冼星海.jpg" alt="author01" />
+							<span class="meta__author">冼星海</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 70</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.5</span>
+						</div>
+						<p>&emsp;被毛主席称之为人民音乐家的冼星海可谓是一代音乐奇才，可惜天妒英才，他在1945年病逝于莫斯科，没有看到自己为之奋斗的新中国的成立。一般人认为能搞音乐的都是家庭富足，锦衣玉食，但冼星海却是个例外。他的一生都在贫苦中追寻着卓越的音乐梦想，他是要成为中国的贝多芬，曲子和音调就是他战斗不息的武器。
+						</p>
+						<p>&emsp;冼星海1905年出生于澳门的一个贫苦的渔民之家，他父亲很早就去世了。他早年曾跟随母亲流落到马来西亚谋生，音乐启蒙是在新加坡养正学校完成的，加入了管弦乐队。1918年对于冼星海而言是他其音乐事业的一个转折点，他进入了岭南大学学习小提琴。由于家庭比较贫困，他申请学校允许让他半工半读。他在坚持学习音乐的同时，还得打工赚钱，为了能饱肚子不得不干各种各样的杂活累活，愣是把学业完成了。之后他又去北京、上海等国内最高音乐学府继续学习小提琴和钢琴，并发表了音乐短论普遍的音乐。
+						</p>
+						<p>&emsp;立志要成为一名国际音乐家的冼星海，在1929年远赴法国勤工俭学，结识了许多国际顶级的小提琴大师和作曲家。1931年，他成为了成功考入巴黎音乐学院肖拉康托鲁姆作曲班的第1个中国学生。旅居法国期间，他创作了风、游子吟等众多曲目。1935年，随着国内抗日救亡运动的日益高涨，冼星海毅然回到了祖国，投入了抗战当中。别人用枪支在战场上抗日，冼星海就用脍炙人口、催人奋进的音乐为国人填充精神食粮，创作了很多令国军士气倍增、令鬼子闻风丧胆的歌曲。八路军和国民党军队很多军歌，都是出自冼星海之手。救国军歌、只怕不抵抗、游击军歌、路是我们开、到敌人后方去、在太行山上等等。
+						</p>
+						<p>&emsp;一九三八年冼星海到了革命根据地延安担任了鲁迅艺术学院音乐系的系主任。在教学之余，他创造了不朽的黄河大合唱、生产大合唱等著名作品。1940年5月，冼星海受党中央派遣，到苏联参与延安与八路军纪录片音乐的制作工作，但由于苏联此时遇到了德国法西斯入侵，苏德战争阻碍了他的回国路。冼星海在滞留苏联的日子里，创作了交响乐神圣之战、民族解放、管弦乐中国狂想曲等作品，其作品数总数超过了300件，还发表了35篇音乐论文。1945年，冼星海由于长期的营养不良和劳累工作，因肺病病逝于莫斯科，享年仅仅40岁。2009年，冼星海被评为为新中国成立作出突出贡献的100名英雄模范之一，可谓实至名归。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">甘为孺子牛的“民族魂”</span>
+						<h2 class="title title--full">一针见血的笔法</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/鲁迅.jpg" alt="author02" />
+							<span class="meta__author">鲁迅</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 59</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.21</span>
+						</div>
+						<p>&emsp;鲁迅（1881年9月25日－1936年10月19日），本名周树人，曾用名周樟寿，曾字豫山，后改豫才，浙江绍兴人，著名文学家、思想家、革命家、教育家[1]、民主战士，五四新文化运动的重要参与者，中国现代文学的奠基人之一，代表作有《呐喊》《彷徨》等。
+						</p>
+						<p>&emsp;鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，被誉为“二十世纪东亚文化地图上占最大领土的作家”。
+						</p>
+						<p>&emsp;毛泽东曾评价：“鲁迅的方向，就是中华民族新文化的方向。”</p>
+						<p>&emsp;光绪三十二年（1906年），1月，课间观“日俄战争教育片”，深受刺激，决定弃医从文。6月，将学籍列入“东京独逸语协会”所设的德语学校。夏秋间，被骗回国与朱安结婚。旋即复赴日本，7月，从仙台回到东京，不再入学读书，专门从事文艺译著工作，此后几年通过不同方式学习了德语，俄语。
+						</p>
+						<p>&emsp;民国十五年（1926年），3月，“三一八惨案”发生。4月，鲁迅作《死地》《记念刘和珍君》等抨击段祺瑞政府屠杀学生的罪行，遭追捕，避难于山本医院。避难期间笔耕不辍。8月，《彷徨》出版，赴厦门大学任国文系教授。12月辞职。
+						</p>
+						<p>&emsp;民国十六年（1927年），1月赴中山大学任教。3月，与中共两广区委书记陈延年会见。4月1日，赴黄埔军校发表演讲《革命时代的文学》，12日，“四一二反革命政变”发生，29日，营救进步学生无果愤然辞职。8月，发表《魏晋风度及文章与药及酒之关系》。9月，致信台静农，拒绝作为诺贝尔文学奖候选人，离开广州赴上海，并与许广平在上海开始同居生活。12月，与梁实秋等人就“第三种人”、“自由人”发生论争，双方争论持久，影响巨大。
+						</p>
+						<p>&emsp;民国十七年（1928年），春，参加中国革命互济会。本年，与创造社、太阳社大部分成员就“革命文学”问题展开论争。同年开始大量搜集马克思主义著作，并为之翻译。同时开始提倡革命美术，倡导现代木刻运动。
+						</p>
+						<p>&emsp;鲁迅一生追求民主，早在新文学运动伊始时期便向封建旧文化宣战，不断与压迫民众的旧思想旧文化斗争。“女师大学生运动”发生后与迫害学生的军阀进行论争，鲁迅不畏强暴执笔对战，显示出一个正直文人的气概。尔后国民党统治之下又大胆披露其黑暗统治。三十年代又与共产党内左倾的错误文艺路线进行斗争，其后与党领导下的文艺工作者合作成立了无产阶级文艺思想领导的左翼作家联盟，鲁迅作为左联的盟主领导左联粉碎了国民党反动文艺妄图绞杀无产阶级文艺的阴谋。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">伟大的共产主义战士</span>
+						<h2 class="title title--full">纯粹之人</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/白求恩.jpg" alt="author03" />
+							<span class="meta__author">白求恩</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 77</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.9.22</span>
+						</div>
+						<p>&emsp;他——“是一个高尚的人，一个纯粹的人，一个有道德的人，一个脱离了低级趣味的人，一个有益于人民的人”，他就是诺尔曼·白求恩。 </p>
+						<p>&emsp;说到白求恩，就不能不说他和中国的情缘。在中国，有他的墓地、纪念馆；有以他的名字命名的医院、中学；他是第一个被中国政府树立雕像的外国人。</p>
+						<p>&emsp;毛主席为白求恩写过三篇短文，即《为人民服务》《愚公移山》《纪念白求恩》——其中有“纯粹的人”这一评价，其实，白求恩在来到中国之前，经历相当丰富，可以说是一个“浪子”了。
+						</p>
+						<p>&emsp;许多记载称，白求恩的青年时代“作风不羁”，尤其在一战结束后的一段时间里，他在欧洲迷失自我，曾吸食大麻叶，沉湎于酒精和女伴之间。</p>
+						<p>&emsp;1937年12月，白求恩前往纽约向国际援华委员会报名，并主动请求组建一个医疗队到中国北部和游击队一同工作。</p>
+						<p>&emsp;他踏上中国的土地后，“浪子前科”沾边的行为都消失了，俨然成了“纯粹的人”的代名词：严于律己、没有不良嗜好、主动拒绝特殊照顾。</p>
+						<p>&emsp;曾经崇尚奢华的他不仅拒绝了汉口医疗部门的挽留，也谢绝了要他留在延安或五台山的好意，甚至因有人好心挽留他在延安工作而把一张椅子扔出窗户，最终他踏上了冀中前线，并在那里以“完人”的形象以身殉职。
+						</p>
+						<p>&emsp;白求恩的祖父是医生，父亲是基督教牧师。来中国之前，他是一个花钱大手大脚的“富二代”，妻子坎贝尔夫人是一个富家小姐。</p>
+						<p>&emsp;1938年初，加拿大著名的胸外科专家白求恩大夫到中国来了。他不仅带来了大批药品、显微镜、X光镜和一套手术器械，最可宝贵的是，他带来了高超的医疗技术，惊人的组织能力和对中国革命战争事业的无限的热忱。
+						</p>
+						<p>&emsp;或许有人会揪着白求恩在西班牙、加拿大的一些“轶事”和野史不放，但是在小喷菇看来，金无足赤，人无完人。就白求恩的贡献来说，他的确是一个值得我们铭记的国际主义战士，是当代医生的职业道德楷模。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">尽善尽美唯解放</span>
+						<h2 class="title title--full">一袭长袍，一把胡琴</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/王尽美.jpg" alt="author04" />
+							<span class="meta__author">王尽美</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点匝数 72</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.28</span>
+						</div>
+						<p>&emsp;1898年6月14日清晨，山东省莒县大北杏村（现属诸城）地主见山堂后院的一处偏房里诞生了一个乳名叫“仓囤”的男孩。这个乳名很朴素也很直接，就是希望经常忍饥挨饿的一家人能有满仓满囤的粮食。
+							这个带着美好愿望出生的孩子便是王尽美。</p>
+						<p>&emsp;他也是最早辞世的中共一大代表，终年27岁。相比平常人来说，27年实在是短暂，但是对王尽美来说，这27年，是他为理想而奋斗的灿烂一生。
+
+						</p>
+						<p>&emsp;王尽美7岁时，因为聪慧伶俐，被地主挑中成为陪读。私塾先生按谱序给王尽美起名叫王瑞俊，字灼斋。难得的读书识字机会为他日后走上不平凡的人生道路铺就了第一段基石。</p>
+						<p>&emsp;后来，地主儿子暴病身亡，地主诬蔑王尽美是“穷命”，“克”死了他的孩子。王尽美非常气愤，发誓再也不为地主孩子陪读，从此在家劳动。</p>
+						<p>&emsp;因为王尽美刻苦自学，成绩优秀，新式初等小学的校长破例免除学费让他继续学习。</p>
+						<p>&emsp;1913年，初小毕业后，王尽美以优秀的成绩获得全免学杂费就读枳沟高等小学的机会。给他任教的王新甫老师是一位具有资产阶级民主进步思想的教师。</p>
+						<p>&emsp;课堂上，王新甫经常慷慨激昂地讲述黄花岗七十二烈士、铁路风潮、武昌起义等故事，介绍有关书刊。</p>
+						<p>&emsp;这些重大事件与进步思想触动了王尽美的心，他开始对政治书刊产生浓厚兴趣，感到社会的变革关系着每个人的命运，萌发了民主主义思想与救国救民的志向。</p>
+						<p>&emsp;1918年春末夏初，王尽美以第一名的成绩考入山东省立第一师范学校北园分校读预科。入校不久，王尽美就显示出超人的活动组织能力。在这里，王尽美的世界由此打开了另一扇敞亮的窗户。
+							真正使王尽美走上前台的是1919年在全国范围内爆发的五四运动。</p>
+						<p>&emsp;他悲愤的情绪和雄辩的口才给人留下深刻印象。在五四运动中，王尽美认识了山东省立第一中学的学生邓恩铭，两人志同道合，结为好友。</p>
+						<p>&emsp;26岁的王尽美患上了肺结核病。长期的忘我工作和艰苦生活，使他的病情越加严重，多次咳血昏倒。1925年8月，病危期间，王尽美没有与人讨论自己的病情，而是在中国共产党青岛市委负责人面前口授遗嘱，交代未竟之业。吃力地讲完最后一个字时，冷汗已经湿透薄薄的衣衫。随后，他过目确认，并按上手印。
+						</p>
+					</article>
+					<article class="content__item">
+						<span class="category category--full">遵义城下洒热血</span>
+						<h2 class="title title--full"></h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/邓萍.jpg" alt="author01" />
+							<span class="meta__author">邓萍</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 49</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.6</span>
+						</div>
+						<p>&emsp;邓萍，1908年生于四川省富顺县，1926年考入黄埔军校武汉分校，在校期间加入中国共产党。曾参加领导著名的平江起义，长期担任红五军参谋长、红三军团参谋长，兼任过红五军军长，一度出任中央红军军事政治学校教育长。参加过五次反"围剿"和长沙战役、赣州战役，以及惨烈的广昌保卫战、湘江之战。邓萍在中央苏区协助彭德怀指挥红三军团与国民党军进行了英勇顽强的战斗，自1927年冬邓萍结识彭德怀后，二人就一直朝夕相处，并肩战斗达7年之久，结下了深厚的战友之情。
+						</p>
+						<p>&emsp;1930年6月，红五军扩编为红三军团，彭德怀任军团长，滕代远任政委，邓萍任参谋长，兼红五军军长。8月23日，一军团、三军团在湖南浏阳会师，组建成"中国工农红军第一方面军"，红三军团仍然是彭德怀任军团长，邓萍任参谋长。之后，二人携手并肩，率部参加了多次著名战役。。
+						</p>
+						<p>&emsp;10月，蒋介石开始策划对红一方面军进行第一次"围剿"。11月1日，武汉行营命令敌第九路军由江西上高、高安、丰城、樟树一线，第十九路军由湘东入赣，"分进合击"，企图消灭红军于袁水流域。
+						</p>
+						<p>&emsp;根据敌情，红一方面军提出了"诱敌深入、东渡赣江"的作战方针。当时，红三军团部分干部战士对诱敌深入的战略方针认识不足，主张红三军团不过赣江，同红一方面军夹江而阵，或重新回到湘鄂赣根据地去作战。针对这种错误认识，邓萍认真细致地做思想工作。邓萍指出:三军团不过江，一、三两军团夹江而阵，造成兵力分散，对粉碎敌人进攻不利。他强调，红军的战略要从全局着眼，在大敌压境的情况下，红三军团不宜返回湘鄂赣根据地;并反复指出:"诱敌深入、东渡赣江"，集中兵力，对粉碎敌军的"围剿"，具有重大战略意义。听了邓萍的耐心动员，干部战士们迅速统一了认识。11月中旬，红三军团全部渡过赣江，与红一军团并肩作战。12月30日至第二年1月3日，邓萍协助彭德怀指挥红三军团，同红一军团和兄弟部队，参加了龙岗战斗和东韶战斗，共歼敌15000人，缴获各种武器12000多件，活捉了敌师长张辉瓒，取得了第一次反"围剿"胜利。
+						</p>
+						<p>&emsp;遵义城当时分为新城和老城。新城在东，没有城墙;老城在西，有内外城墙，以一条河流为分界线。1935年2月26日清晨，为了攻占老城，夺取遵义战役的全面胜利，邓萍主动向彭德怀要求，跟随担任前卫任务的红十一团行动，以确保再次攻占遵义的胜利。27日黄昏，邓萍与红十一团团长张爱萍、团参谋长蓝国清冒着敌人的枪林弹雨，率领部队前进到遵义老城北门外的前沿阵地。先把部队安置好后，三人隐蔽在距护城河50米远一个小土坡的草丛里，他们要寻找一条便于部队向前运动的路线，以便夜幕降临时发起总攻。蓝国清曾建议转移，邓萍没有同意，说这里便于观察。这时一个小通信员从后面摸上来，邓萍对他交代了一句，那个小战士就趁着薄暮飞身跑回，这一下，把他们三个给暴露了。一排子枪弹扫过来，邓萍壮烈牺牲，年仅27岁。。
+						</p>
+						<p>&emsp;新中国成立后，在当地群众的帮助下，人民政府重新找到了邓萍烈士的遗骸，迁葬在青松覆盖、绿水环绕的凤凰山上。彭德怀亲自修订了邓萍的简历，张爱萍亲笔为邓萍烈士撰写了墓志铭。
+
+						</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">生是为中国 死是为中国</span>
+						<h2 class="title title--full">铁之意志</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/刘伯坚.jpg" alt="author02" />
+							<span class="meta__author">刘伯坚</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i>点赞数 55</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.2</span>
+						</div>
+						<p>&emsp;1895年1月9日，刘伯坚出生于四川省平昌县。幼年时，他便刻苦好学，立下了改造旧中国的远大志向。1918年，刘伯坚受到四川省嘉陵道尹陈秉坤赏识，被聘为陈秉坤的秘书。但当他看到国家在军阀、帝国主义列强统治下四分五裂、千疮百孔的局面，便毅然远赴欧洲勤工俭学，寻找救国救民的真理。
+						</p>
+						<p>&emsp;在欧洲勤工俭学期间，刘伯坚阅读了大量马克思主义经典着作，认真研究俄国十月革命经验，和周恩来、赵世炎等人发起组织了旅欧中国少年共产党。1922年，刘伯坚转为中国共产党党员，此后，他介绍聂荣臻、蔡畅等人加入中国共产党。1923年年底，刘伯坚进入苏联莫斯科东方大学学习，被推举为中共旅莫支部和旅莫共青团负责人，并得到了同在苏联的爱国将领冯玉祥的赏识。北伐战争开始后，1926年9月17日，回国之后的冯玉祥在刘伯坚等人的推动下，举行了着名的「五原誓师」，宣布脱离北洋军阀政府，组成国民军联军，参加国民革命。冯玉祥担任国民军联军总司令，刘伯坚担任国民军联军总政治部副部长（后任部长)。
+						</p>
+						<p>&emsp;1927年「四一二」「七一五」反革命政变之后，冯玉祥受蒋介石拉拢，与共产党决裂，在军中进行「清党」，刘伯坚被迫离开冯玉祥部队。1928年，刘伯坚重返苏联学习军事，其间出席了中共六大。学习结束后，刘伯坚回到中央苏区工作，曾担任中共中央军委秘书长，并当选为中华苏维埃中央执行委员。1931年12月，刘伯坚参与领导了国民党第二十六路军在江西发起的「宁都起义」，后担任由起义部队改编的红五军团政治部主任等职。
+						</p>
+						<p>&emsp;1934年10月，中央红军主力出发长征，刘伯坚由于受到王明集团的打击，未能参加长征，留在赣南坚持革命斗争，任赣南军区政治部主任。他积极组织留守部队，为主力部队做好架桥等后勤保障工作，护送中央红军主力部队渡河长征。1935年3月4日，在同国民党军作战中，刘伯坚为掩护战友们冲出重围，身负重伤，不幸被捕。
+						</p>
+						<p>&emsp;被捕后，敌人的威逼利诱和严刑拷打都未能让刘伯坚屈服，他在给家人的信中写道:「生是为中国，死是为中国，一切听之而已。」并叮嘱亲友不要为营救他而求助于当年曾与他共事的国民党要员。
+						</p>
+						<p>&emsp;在牺牲之前，刘伯坚给妻子写了最后一封手书:「你不要伤心，望你无论如何要为中国革命努力，不要脱离革命战线，并要用尽一切力量教养虎、豹、熊三幼儿成人，继续我的光荣的事业......
+						</p>
+						<p>&emsp;1935年3月21日，刘伯坚高唿着「中国共产党万岁」的口号，壮烈牺牲在江西省大庾（今大余）县城东北郊的金莲山麓，时年40岁。</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">生的伟大，死的光荣</span>
+						<h2 class="title title--full">伟大光荣气若兰</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/刘胡兰.jpg" alt="author03" />
+							<span class="meta__author">刘胡兰</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 62</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.9.29</span>
+						</div>
+						<p>&emsp;走进位于山西省文水县的刘胡兰纪念馆，广场纪念碑上“生的伟大，死的光荣”8个大字熠熠生辉。刘胡兰烈士墓掩映在纪念馆后苍松翠柏间，墓前矗立着8米高的汉白玉刘胡兰雕像。</p>
+						<p>&emsp;刘胡兰，1932年出生在山西文水县云周西村一个贫苦农民家庭，小小年纪，便对黑暗的旧社会产生了强烈的不满。全面抗战爆发后，中国共产党领导山西人民开展救亡运动，文水县成立了抗日民主政府。从此，刘胡兰开始逐步接触革命道理。刘胡兰积极参加村里的抗日儿童团，为八路军站岗、放哨、送情报。
+						</p>
+						<p>&emsp;抗日战争胜利后，国民党阎锡山部队占领了文水县城，解放区军民被迫拿起武器，保卫抗战胜利果实。1945年11月，刘胡兰参加了文水县党组织举办的妇女训练班。40多天的学习，使她懂得了许多革命道理，阶级觉悟有了进一步提高。回村后，她担任云周西村妇救会秘书，与党员一起，发动群众斗地主、送公粮、做军鞋，动员青年报名参军。1946年6月，她被批准为中共候补党员。这一年，她才14岁。。
+						</p>
+						<p>&emsp;1946年10月，国民党军进犯文水县城。为保存革命力量，县委决定大部分同志转移上山，留下部分同志坚持斗争。她以自己年纪小、熟悉环境为由，主动要求留下来，党组织同意了她的请求。她和留下来的同志一起向各村党组织传达党的指示，组织群众掩埋粮食，并配合武工队镇压了反动村长。。
+						</p>
+						<p>&emsp;1947年1月12日，刘胡兰被国民党军和地主武装抓捕。在敌人威胁面前，她坚贞不屈，大义凛然地说：“怕死不当共产党！”敌人没有办法，将同时被捕的6位革命群众当场铡死。但她毫不畏惧，从容地躺在铡刀下，壮烈牺牲，年仅15岁。
+
+						</p>
+						<p>&emsp;1947年3月下旬，毛泽东带领中共中央机关转战陕北途中，中共中央书记处书记、中央纵队司令员任弼时向他汇报了刘胡兰英勇就义的事迹，毛泽东问：“她是党员吗？”任弼时说：“是个优秀的共产党员，才15岁。”毛泽东深受感动，挥笔写下了“生的伟大，死的光荣”8个大字。
+						</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">化作红梅映山红</span>
+						<h2 class="title title--full">牺牲在胜利前夜</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/江竹筠.jpg" alt="author04" />
+							<span class="meta__author">江竹筠</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 44</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.10.21</span>
+						</div>
+						<p>&emsp;江竹筠出生于四川省一个农民家庭。1939年，她在重庆读书时，秘密加入中国共产党。入党后，她一直在重庆从事地下联络工作。1943年，党组织安排她与当时的中共重庆市委领导人之一彭咏梧假扮夫妻开展地下工作，后来两人产生感情并正式结婚。同志们都亲切地称江竹筠为「江姐」。
+						</p>
+						<p>&emsp;1947年，人民解放战争进入战略反攻阶段，解放区不断扩大，但川渝地区还处在黎明前的黑暗中。按照组织安排，彭咏梧、江竹筠夫妇到川东农村领导开展武装斗争。</p>
+						<p>&emsp;1948年春，彭咏梧在领导武装暴动时不幸牺牲，头颅被敌人悬挂在城门上示众。考虑到孩子年幼，党组织想让江姐回到条件较好的重庆工作，但江姐认为，川东的地下工作自己更熟悉，别的同志接手会有很多困难。于是，她强忍悲痛，在丈夫倒下的地方继续战斗，从而确保了中共川东临时委员会的正常运行。
+						</p>
+						<p>&emsp;1948年6月，由于叛徒出卖，江姐不幸被捕。在被反动派押往重庆的船上，她—心想向党组织传递消息。当发现同船乘客都在注意被捕的同志戴着的手铐时，她灵机一动，大声对看守说道:「你平白诬赖别人是共产党。」有共产党人被捕的消息，就这样迅速传播开来。重庆党组织第一时间得知万县党组织遭到破坏，及时做出了反应。
+						</p>
+						<p>&emsp;在重庆渣滓洞狱中，由于江姐是中共党内重要人物，国民党反动派为获取情报，对她动用了老虎凳、吊锁、电刑等各种酷刑，甚至将竹签钉进她的十指。面对敌人的酷刑摧残和死亡威胁，江姐始终坚贞不屈。
+						</p>
+						<p>&emsp;在生命的最后阶段，江姐既遭受了酷刑，也给战友和家人留下了最温情的记忆。她预感到自己将要牺牲，便将自己的梳子、牙刷、衣服等所有能送的东西都给了狱友，鼓励他们继续战斗。她将棉被中的棉絮偷偷烧成了灰，混着水变成墨汁，把筷子磨尖作笔，在厕纸上写下了一封托孤信。
+						</p>
+						<p>&emsp;1949年11月14日，江姐英勇就义，年仅29岁。与江姐一起被关押在渣滓洞中的300多名共产党员，遭到了反动派的屠杀，仅有34人幸免于难。江姐和她的战友用生命践行了对党的忠诚，用丹心换来了民族的解放。他们的崇高精神，将永远感染和激励着一代代中国人。
+						</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">让红色电波永不消逝的人</span>
+						<h2 class="title title--full">永不暗淡的英雄</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/李白.jpg" alt="author05" />
+							<span class="meta__author">李白</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 62</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.11.1</span>
+						</div>
+						<p>&emsp;李白出生于1910年5月1日，原名李华初，湖南浏阳人。</p>
+						<p>&emsp;他于1925年加入中国共产党，1927年参加湘赣边秋收起义，1930年8月加入中国工农红军，成为红四军通信连的一名战士，后任通信连指导员。</p>
+						<p>&emsp;1931年6月，李白调到瑞金中央军委无线电学校（西安电子科技大学前身）第二期电讯班，学习无线电技术。结业后，他被分配到红五军团，担任电台台长兼政治委员，参加了长征。</p>
+						<p>&emsp;在长征途中，李白向全体无线电队员发出了“电台重于生命”的号召，这也成为他本人的终生座右铭。</p>
+						<p>&emsp;1937年，抗战爆发，李白受党组织派遣，化名李霞，赴上海筹备建设秘密电台。</p>
+						<p>&emsp;1948年底，解放战争进入关键时期，上海正处于黎明前最黑暗的时刻。国民党反动派预感到末日将临，通过分区停电、暗中抄收信号等方式，竭尽手段来侦测我党地下秘密电台。</p>
+						<p>&emsp;1948年12月30日凌晨，在与党中央进行电台通讯的过程中，李白被国民党特务机关测出电台位置，不幸被捕。</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">红色的资本家</span>
+						<h2 class="title title--full">毁家兴学，一生为国</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/陈佳庚.jpg" alt="author06" />
+							<span class="meta__author">陈嘉庚</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 55</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.30</span>
+						</div>
+						<p>&emsp;陈嘉庚先生是伟大的爱国主义者、杰出的华侨领袖、著名实业家、教育家和社会活动家。陈嘉庚于1874年10月21日出生在福建省同安县集美社（即现厦门市集美区）。十七岁往新加坡从父经商，后独立经营菠萝罐头厂、米店和橡胶园等。1916年后，以橡胶和胶制品业为主，鼎盛时期其销售网遍及全球，谓新马树胶王国的四大开拓者之一，成为驰名海内外的大实业家。
+						</p>
+						<p>&emsp;陈嘉庚身居异邦，心怀乡国，经营实业不谋私利，立志竞争义务报效祖国，故倾资兴办教育等公益事业，以尽国民天职。早于1913年在家乡创办集美小学，后又增办师范、中学、水产、航海、商业、农业等校，统称为"集美学校"。1921年，陈嘉庚创办厦门大学，亲自选择校址、校长，主持建筑校舍，以及高薪聘请师资等，设文、理、法、商、教育等五院十七系，为海内外培养高等人才。在侨居地新加坡亦倡办和赞助许多学校，形成陈嘉庚广泛的开放型教育体系。尽管遇世界经济危机，企业经营未能转机，他仍多方筹措校费，百折不挠维持办学。1932年，当外国财团答应以停止支持厦门大学和集美学校为条件保护其企业经营，即遭他断然拒绝。直至1937年春无力支持，遂无条件地将厦门大学献给政府。
+						</p>
+						<p>&emsp;厦门大学改为"国立"后，他极为关注其发展。1940年回国慰问期间，还特地到迁往内地长汀的学校视察；1949年归国亦来校访问；1950年定居集美后，仍继续募资、筹划扩建学校规模。在他的倡导下，许多华侨捐资兴学蔚然成风，影响深远。他不但为教育事业鞠躬尽瘁，而且具有卓越的教育思想，提倡学生要在德育、智育、体育诸方面全面发展，倡办职业技术教育，高度重视师范教育，以及重视校长、教师在办学中的决定作用等等。他还推行社会教育，亲建集美鳌园"博物大观"和倡建厦门华侨博物院等。
+						</p>
+						<p>&emsp;陈嘉庚赤诚爱国，振兴中华。1909年结识孙中山，翌年参加同盟会。辛亥革命闽省光复后，被选为新加坡福建保安会会长，募款支持孙中山的革命活动。1937年"七·七"抗战爆发后，组织"南洋各属华侨筹赈祖国难民总会"（简称"南侨总会"）并被选为主席，领导支援祖国抗日救亡。
+						</p>
+						<p>&emsp;1939年汪精卫叛国投敌，他严电声讨。1940年3月率领"南洋华侨回国慰劳视察团"回国视察各战区和重庆、延安等地，不畏强暴，坚持真理，明辨是非，将救国救民的希望寄托在中国共产党身上，反对蒋介石独裁，坚持团结抗战。1941年12月日本帝国主义进攻马来亚，他领导"新加坡华侨抗敌动员总会"，1942年3月新加坡沦陷避居印尼爪哇，赋诗表明舍生取义的决心。
+						</p>
+						<p>&emsp;1945年日本帝国主义投降，他安全返回新加坡，各界集会庆祝，众望所归。1949年应毛泽东主席电邀回国参加新政协会议和开国大典，于1950年5月回国定居。历任中央人民政府委员、华侨事务委员会委员、归国华侨联合会主席，先后当选为全国人民代表大会常务委员、全国政协副主席等职，直接参议国事。他已年逾古稀，仍不辞劳苦到祖国各地视察，致力于祖国社会主义建设事业，并对推动华侨爱国大团结、支持祖国和家乡建设起到积极作用，临终仍念念不忘祖国统一大业。
+						</p>
+						<p>&emsp;陈嘉庚于1961年8月12日在北京病逝，终年八十七岁，国家给予以国葬的哀荣，灵柩运回集美，安葬于"鳌园"中。</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">甘将热血沃中华</span>
+						<h2 class="title title--full">誓志为国，人不为家</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/赵一曼.jpg" alt="author07" />
+							<span class="meta__author">赵一曼</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 72</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>2022.9.18</span>
+						</div>
+						<p>&emsp;她是立志“白山黑水除敌寇”的抗日勇士，她是“笑看旌旗红似花”的巾帼豪杰。她怀揣着一颗“苟利国家生死以，岂因祸福避趋之”的革命之心，她用生命诠释什么是“满腔热血沃中华”。她就是我心目中的英雄——赵一曼。
+						</p>
+						<p>&emsp;赵一曼是四川宜宾人，原名李坤泰，人们亲切地叫她“李姐”，战士们则称她为“我们的女政委”。1935年间，赵一曼率部队在黑龙江哈尔滨以东的地区进行抗日活动，给日伪军以沉重的打击。
+						</p>
+						<p>&emsp;不幸的是，这位“红枪白马女政委”，在1935年一次与日伪军激战的过程中为掩护战友，腿部不幸严重负伤，因失血过多在昏迷后被俘。为了尽快从她口中获得有效情报，日伪军将她的腿伤简单治疗后便带回审讯室审问。
+						</p>
+						<p>&emsp;利诱之下，她坚决不从；威逼之下，她伤痕累累。她瘦弱的身躯，日日承受酷刑，可是她秉持着坚定的信念，即使因伤势过重而失去意识，她也不肯屈服。她“一寸丹心图报国”，始终记着党对她的教导，始终记着她是一名共产党员。她深切地明白，国家此时饱受灾难，满目疮痍的场景不禁让人泪由心生，多少人因为战争家破人亡……她愿意自己受苦，换同志的安全，换祖国的未来，换天下人的明天。
+						</p>
+						<p>&emsp;后来，她因腿部受伤严重，到了生命垂危的地步。日伪军为了日后能获得重要口供，将她送进医院进行治疗，并全程进行监视。赵一曼住院期间也未曾懈怠，每当女护士韩勇义踏进病房，她就把握住各种机会对她进行反日爱国主义思想教育；她向看守她的警察董宪勋阐述了日寇罄竹难书的罪行，每一件都令人深恶痛绝。在她的耐心教育之下，董韩两人决定帮她逃离日寇的魔掌。
+						</p>
+						<p>&emsp;最终赵一曼没能逃走，再次被捕，走向刑场。临刑前，她高呼“打倒日本帝国主义”“中国共产党万岁”的口号。“风萧萧兮易水寒，壮士一去兮不复还。”日伪军罪恶的子弹穿过赵一曼的胸膛——她壮烈牺牲了，但她铁一般的意志和“满腔热血沃中华”的精神永垂不朽。
+						</p>
+
+					</article>
+					<article class="content__item">
+						<span class="category category--full">正气长存的民主战士</span>
+						<h2 class="title title--full">碧血丹心映千秋</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="img/authors/闻一多.jpg" alt="author08" />
+							<span class="meta__author">闻一多</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 点赞数 55</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2022.10.24</span>
+							</nav>
+						</div>
+						<p>&emsp;闻一多，1899年生，湖北浠水县人，中国民主同盟盟员。1912年，考入北京清华学校，是清华新剧社、美术社的发起者，曾担任《清华周刊》总编辑及《清华学报》编辑。</p>
+						<p>&emsp;1919年，闻一多参加五四爱国运动。6月，他作为清华学校学生代表去上海参加全国学生联合会成立大会。1922年赴美留学，先后在芝加哥美术学院、科罗拉多大学学习美术，同时继续投入大量精力从事新诗创作和文学研究。其间，他写下了著名的《七子之歌》等多篇爱国思乡之作。1923年在国内出版诗集《红烛》
+						</p>
+						<p>&emsp;1937年7月，全国抗战爆发。他随校迁往昆明，任北大、清华、南开三校合并后的西南联合大学教授。面对严酷的现实，他毅然投身到抗日救亡和争民主、反独裁的斗争中。</p>
+						<p>&emsp;抗战胜利后，蒋介石坚持独裁、内战政策。1945年12月1日，昆明发生国民党当局镇压学生爱国运动的“一二·一”惨案，闻一多亲自为死难烈士书写挽词：“民不畏死，奈何以死惧之”。出殡时，他拄着手杖走在游行队伍前列，并撰写了《一二一运动始末记》，揭露惨案真相，号召“未死的战士们，踏着四烈士的血迹”继续战斗。
+						</p>
+						<p>&emsp;1946年6月29日，民盟云南支部举行社会各界招待会，他在会上宣布民盟决心响应中共的号召，坚持“民主团结、和平建国”的立场，号召“各界朋友们亲密地携起手来，共同为反内战、争民主，坚持到底！”
+						</p>
+						<p>&emsp;7月11日，民盟负责人、著名社会教育家、当年救国会七君子之一的李公朴，在昆明被国民党特务暗杀。闻一多当即通电全国，控诉反动派的罪行。他为《学生报》的《李公朴先生死难专号》题词：“反动派！你看见一个倒下去，可也看得见千百个继起来！”7月15日，在云南大学举行的李公朴追悼大会上，主持人为了他的安全，没有安排他发言。但他毫无畏惧，拍案而起，慷慨激昂地发表演讲，痛斥国民党特务，并握拳宣誓：“我们有这个信心：人民的力量是要胜利的，真理是永远存在的”，“我们不怕死，我们有牺牲精神，我们随时准备像李先生一样，前脚跨出大门，后脚就不准备再跨进大门！”当天下午，他主持《民主周刊》记者招待会，进一步揭露暗杀事件的真相。散会后，闻一多在返家途中，突遭国民党特务伏击，身中十余弹，为建立新中国洒尽了最后一滴血。
+						</p>
+						<span class="meta__author">Carol Freeman</span>
+
+
+					</article>
+				</div>
+				<button class="close-button">返回</button>
+			</section>
+		</div>
+	</div><!-- /container -->
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

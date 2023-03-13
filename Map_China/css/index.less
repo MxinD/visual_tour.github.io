@@ -1,0 +1,407 @@
+// 1rem = 48.7
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  // 盒子模型
+  color: #086DFF;
+}
+
+body {
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+
+#wrapper {
+  header {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    position: relative;
+    border: 1px solid aqua;
+    line-height: 2rem;
+
+    h1 {
+      margin: 0 auto;
+      color: rgba(190, 245, 226, 05);
+      font-size: 0.7rem;
+    }
+
+    .top_time {
+      font-size: 0.3rem;
+      display: flex;
+      position: absolute;
+      left: 1rem;
+      color: aliceblue;
+
+      p {
+        color: azure;
+        font-size: 0.3rem;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    margin-top: 0.3rem;
+
+    #left {
+      float: left;
+      width: 8rem;
+
+      .left_one {
+        position: relative;
+        width: 100%;
+        height: 5rem;
+        border: 1px solid #103764;
+
+        .lo_con {
+          width: 100%;
+          height: 100%;
+        }
+
+        &::before {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          content: '';
+          top: 0;
+          left: 0;
+          border-left: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+
+        &::after {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          content: '';
+          top: 0;
+          right: 0;
+          border-right: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+
+        .footer {
+          // 模块底部角标
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+
+          &::before {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            content: '';
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+
+          &::after {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            content: '';
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+        }
+      }
+
+      .left_two {
+        width: 100%;
+        height: 5rem;
+        border: 1px solid #103764;
+        margin-top: 10px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          content: '';
+          top: 0;
+          left: 0;
+          border-right: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+
+        &::after {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          content: '';
+          top: 0;
+          right: 0;
+          border-right: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+        .lt_con{
+          width: 100%;
+          height: 100%;
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+
+          &::before {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: '';
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+
+          &::after {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: '';
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+        }
+      }
+
+      .left_three {
+        width: 100%;
+        height: 5rem;
+        border: 1px solid #103764;
+        margin-top: 10px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          content: '';
+          top: 0;
+          left: 0;
+          border-left: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+
+        &::after {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          content: '';
+          top: 0;
+          right: 0;
+          border-right: 2px solid #71dde7;
+          border-top: 2px solid #71dde7;
+        }
+        .lth_con{
+          width: 100%;
+          height: 100%;
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+
+          &::before {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: '';
+            bottom: 0;
+            left: 0;
+            border-left: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+
+          &::after {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: '';
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid #71dde7;
+            border-bottom: 2px solid #71dde7;
+          }
+        }
+      }
+    }
+
+    #center {
+      width: 80%;
+      position: relative;
+      left: 0.8rem;
+
+      .weather_box {
+        // border:  1px solid aqua;
+        
+        .weather_pic {
+          width: 10.5rem;
+          height: 1rem;
+          // border: 1px solid aqua;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          
+          &::before {
+            content: '';
+            width: 0.5rem;
+            height: 0.3rem;
+            border-left: 2px solid aqua;
+            border-top: 2px solid aqua;
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+          }
+
+          &::after {
+            content: '';
+            width: 0.5rem;
+            height: 0.3rem;
+            border-right: 2px solid aqua;
+            border-top: 2px solid aqua;
+            position: absolute;
+            right: 0;
+            top: 0.1rem;
+          }
+
+          li {
+            width: 0.6rem;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 50%;
+            }
+          }
+        }
+
+        .weather {
+          width: 10.5rem;
+          height: 5rem;
+          border: 1px solid rgba(1, 82, 82,.5);
+          position: absolute;
+          margin-top: -0.9rem;
+          left: 0;
+
+          &::before {
+            content: '';
+            width: 0.5rem;
+            height: 0.3rem;
+            border-left: 2px solid aqua;
+            border-bottom: 2px solid aqua;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
+
+          &::after {
+            content: '';
+            width: 0.5rem;
+            height: 0.3rem;
+            border-right: 2px solid rgb(157, 253, 253);
+            border-bottom: 2px solid rgb(157, 253, 253);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+
+      .map {
+        opacity: 0.6;
+        position: absolute;
+        top: 1.5rem;
+        // border: 1px solid aqua;
+
+        .map_bg1 {
+          width: 10rem;
+          height: 10rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url(../images/map.png);
+          background-size: 100% 100%;
+          opacity: 0.3;
+        }
+
+        .map_bg2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 11rem;
+          height: 11rem;
+          background: url(../images/lbx.png);
+          animation: rotate1 15s linear infinite;
+          opacity: 0.6;
+          background-size: 100% 100%;
+        }
+
+        .map_bg3 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 11rem;
+          height: 11rem;
+          background: url(../images/jt.png);
+          animation: rotate2 10s linear infinite;
+          // linear 匀速  infinite无限循环
+          opacity: 0.6;
+          background-size: 100% 100%;
+        }
+
+        @keyframes rotate1 {
+          form {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+
+          to {
+            transform: translate(-50%, -50%) rotate(360deg);
+          }
+        }
+
+        @keyframes rotate2 {
+          form {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+
+          to {
+            transform: translate(-50%, -50%) rotate(-360deg);
+          }
+        }
+
+        .china {
+          width: 15rem;
+          height: 15rem;
+        }
+      }
+    }
+
+  }
+}

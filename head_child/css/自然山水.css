@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../img/bgc_main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.warp_con header {
+  width: 100%;
+  height: 400px;
+}
+.warp_con header .show_pic img {
+  height: 400px;
+  width: 100%;
+}
+.warp_con main {
+  width: 1020px;
+  margin: 0 auto;
+}
+.warp_con main h2 {
+  border-left: 20px solid #7ec8f3;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.ah-tab > .ah-tab-item {
+  padding: 5px 10px;
+  background-color: #d5ecfa;
+  margin-right: 10px;
+}
+.pic_li {
+  float: left;
+  width: 305px;
+  height: 200px;
+  border: 1px solid #aaa;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.pic_li img {
+  position: absolute;
+  width: 305px;
+  height: 200px;
+}
+.pic_li span {
+  display: block;
+  height: 60%;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.1);
+  bottom: 0;
+  font-size: 12px;
+}
+.pic_li span:hover {
+  background-color: rgba(170, 170, 170, 0.2);
+  color: #ffffff;
+}
+.ah-tab > .ah-tab-item:hover {
+  background-color: bisque;
+}

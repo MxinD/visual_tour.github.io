@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南</title>
+    <link rel="stylesheet" href="./child.css">
+    <style>
+        body{
+            background-image: url(./湖南picture/bg3.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .wheather{
+            float: left;
+            position: fixed;
+        }
+        .map{
+            float: right;
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:320px;height:320px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(112.945333,28.233971);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+                }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+    </div>
+    <div class="wheather">
+        <div id="he-plugin-standard"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "layout": "2",
+    "width": "320",
+    "height": "320",
+    "background": "1",
+    "dataColor": "FFFFFF",
+    "city": "CN101250101",
+    "key": "c95d4810a78143739d6f55d5e21f1720"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+    </div>
+    <div class="pro1 privence" id="湖南">
+        <header>
+            <h1>大湖之南，湘约世界</h1>
+        </header>
+        <main>
+            <div class="top">
+                <li><img src="./湖南picture/top/凤凰古镇.jpg" alt=""></li>
+                <li><img src="./湖南picture/top/北门码头.jpg" alt=""></li>
+                <li><img src="./湖南picture/top/沱江泛舟.jpg" alt=""></li>
+                <li><img src="./湖南picture/top/芙蓉古镇.jpg" alt=""></li>
+                <li><img src="./湖南picture/top/虹桥.jpg" alt=""></li>
+                <li><img src="./湖南picture/top/虹桥 (2).jpg" alt=""></li>
+            </div>
+            <div class="bot">
+                <div class="right">
+                    <h2>锦绣潇湘，亲亲常德</h2>
+                    <li>
+                        <img src="./湖南picture/bottom/仰天湖大草原.jpg" alt="">
+                        <span>在来到仰天湖草原之前，你可能很难想象，在山湖怀抱的湖南，竟还有这么一处美丽的高山草原。去大草原上策马奔腾不一定要去到内蒙古大草原，在湖南郴州北湖区有一处让人感觉到真的到了梦想的大草原上
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/bottom/凤凰古城.jpg" alt="">
+                        <span>可以说凤凰古城这遗世的美，多半是拜沱江所赐，她是凤凰古城的母亲河，依着城墙缓缓流淌，与江边木结构的吊脚楼以及浓厚的苗族风情，构成了凤凰独具一格的味道。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/bottom/天门山.jpg" alt="">
+                        <span>天门山海拔1500余米，因自然奇观天门洞而得名，是张家界景区最高的山，独特的喀斯特台型地貌看起非常震撼，是张家界的第二个国家森林公园。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/bottom/衡山.jpg" alt="">
+                        <span>衡山风景名胜区位于衡阳市南岳区境内，高峰是海拔约1300米的祝融峰。在“五岳”中，衡山的地理位置靠南，相比较气候条件好，使得山中一年四季都是满目苍翠，树木茂盛，有着“五岳独秀”的美称。
+                        </span>
+                    </li>
+                    <h2>山水洲城，美在长沙</h2>
+                    <li>
+                        <img src="./湖南picture/middle/桃花源.jpg" alt="">
+                        <span>常德桃花源，是1600多年前中国东晋大诗人陶渊明《桃花源记》所描述的世外桃源真迹，始建于晋代，历史上是我国四大道教圣地之一，有“第三十五洞天，四十六福地的美誉”。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/middle/橘子洲.jpg" alt="">
+                        <span>橘子洲是湘江名洲，由南至北，纵贯江心，西瞻岳麓，东临古城。橘子洲景区是全国文明风景旅游区示范点、全国首批“红色旅游”经 典景点之一，省级文明单位、湖南百景单位、潇湘八景之一、长沙“山、水、洲、城”旅游格局的核心要素。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/middle/武陵塬.jpg" alt="">
+                        <span>武陵源风景名胜区地处位于湖南省西北部的武陵山脉中段桑植和慈利两县交界处，隶属张家界市。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./湖南picture/middle/盘龙大观园.jpg" alt="">
+                        <span>盘龙大观园的养和园名不虚传，幽静，美丽。而且今天天气晴好，在蓝天白云的映衬下，养和园更显得大气。最美的是登上八合塔的最高层看风景，更是觉得豁然开朗，天高云淡，有”无限风光在险峰”之感。
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../pic.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Many省份</title>
+  <script src="./js/jQuery.min.js"></script>
+  <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="./js/flexible.js"></script>
+  <link rel="stylesheet" href="./css/many.css">
+  <style>
+    body{
+      /* background-image: url(./img/hl1R-C.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <aside class="col-lg-2">
+        <img src="./many_img/001.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/01.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/002.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/02.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/003.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/03.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/004.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/04.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+      </aside>
+
+      <div class="content col-lg-8 col-lg-offset-2" >
+        <i>Welcome To <span class="locaStory"></span>！！</i>
+        <div class="pic">
+          <div class="row">
+            <div class="show_pic">
+              <li class="pic_1"><img src="./many_img/x22.png" alt=""></li>
+              <li class="pic_2" style="display: none;"><img src="./many_img/x10.png" alt=""></li>
+              <button class="l_click"><</button>
+              <button class="r_click">></button>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var pic_1 = document.querySelector('.pic_1')
+          var pic_2 = document.querySelector('.pic_2')
+          var btn_l = document.querySelector('.l_click')
+          var btn_r = document.querySelector('.r_click')
+          
+          var flag = true
+          btn_l.addEventListener('click',function(){
+            if(flag){
+              pic_1.style.display = "none"
+              pic_2.style.display = "block"
+              flag = !flag
+            }else{
+              pic_1.style.display = "block"
+              pic_2.style.display = "none"
+              flag = !flag
+            }
+          })
+          btn_r.addEventListener('click',function(){
+            if(flag){
+              pic_1.style.display = "none"
+              pic_2.style.display = "block"
+              flag = !flag
+            }else{
+              pic_1.style.display = "block"
+              pic_2.style.display = "none"
+              flag = !flag
+            }
+          })
+
+        </script>
+        <p><i><span class="locaStory2"></span>欢迎您!!!</i></p>
+        <div class="row">
+          <li class="col-lg-4">
+            <img src="./many_img/x10.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+          <li class="col-lg-4">
+            <img src="./many_img/x14.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+          <li class="col-lg-4">
+            <img src="./many_img/x15.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+        </div>
+        <div class="row">
+          <li class="col-lg-4">
+            <img src="./many_img/x2.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+          <li class="col-lg-4">
+            <img src="./many_img/x4.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+          <li class="col-lg-4">
+            <img src="./many_img/x17.png" alt="">
+            <span>真迹绝 真心能给谁
+              牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回
+              悬笔一绝 那......</span>
+          </li>
+        </div>
+        <div class="bottom_pic">
+          <div class=" row bot_row">
+            <img src="./many_img/x19.png" style="" alt="">
+            <p>牧笛横吹 黄酒小菜又几碟
+              夕阳余晖 如你的羞怯似醉
+              摹本易写 而墨香不退与你同留余味
+              一行朱砂 到底圈了谁
+              无关风月 我题序等你回
+              悬笔一绝 那岸边浪千叠
+              情字何解 怎落笔都不对
+              而我独缺 你一生的了解
+              无关风月 我题序等你回</p>
+          </div>
+        </div>
+      </div>
+      <article class="col-lg-2">
+        <img src="./many_img/大东旅游区.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/鹿回头.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/吉庆广场.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/02.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/003.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/03.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/004.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+        <img src="./many_img/04.jpg" alt="">
+        <span>无关风月 我题序等你回
+          悬笔一绝 那岸边浪千叠
+          情字何解 怎落笔都不对
+          而我独缺 你一生的了解
+          无关风月 我题序等你回</span>
+      </article>
+    </div>
+  </div>
+
+
+  <script>
+    $(function(){
+      $('.locaStory')[0].innerHTML = localStorage.getItem('province')
+      $('.locaStory2')[0].innerHTML = localStorage.getItem('province')
+    })
+  </script>
+</body>
+</html>

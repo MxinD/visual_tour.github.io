@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江西</title>
+    <link rel="stylesheet" href="./child.css">
+    <style>
+        body{
+            background-image: url(./江西/bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .wheather{
+            float: left;
+            position: fixed;
+        }
+        .map{
+            float: right;
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:320px;height:320px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(115.864528,28.687675);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_SMALL});
+	map.addControl(ctrl_nav);
+                }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+    </div>
+    <div class="wheather">
+        <div id="he-plugin-standard"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "layout": "2",
+    "width": "320",
+    "height": "320",
+    "background": "1",
+    "dataColor": "FFFFFF",
+    "city": "CN101240101",
+    "key": "c9b2bc5c6c2d4b85b998d293b6e2603d"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+    </div>
+    <div class="pro1 privence" id="江西">
+        <header>
+            <h1>山川秀美，人文鼎盛，最美江西！</h1>
+        </header>
+        <main>
+            <div class="top">
+                <li><img src="./江西/top/微信图片_20221109153339.jpg" alt=""></li>
+                <li><img src="./江西/top/微信图片_202211091533391.jpg" alt=""></li>
+                <li><img src="./江西/top/微信图片_202211091533392.jpg" alt=""></li>
+                <li><img src="./江西/top/微信图片_202211091533393.jpg" alt=""></li>
+                <li><img src="./江西/top/微信图片_202211091533394.jpg" alt=""></li>
+                <li><img src="./江西/top/微信图片_202211091533395.jpg" alt=""></li>
+            </div>
+            <div class="bot">
+                <div class="right">
+                    <h2>宜 春一年四季在宜春</h2>
+                    <li>
+                        <img src="./江西/middle/三清山.jpg" alt="">
+                        <span>三清山风景区有“小黄山”之称,因玉京、玉虚、玉华三座山峰而得名。在这里可以观看美丽的云海☁️日出，欣赏山间惟妙惟肖的奇石，还能走上高空栈道赏景。
+
+                            .
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/middle/庐山.jpg" alt="">
+                        <span>“不识庐山真面目，只缘身在此山中”。走进庐山，就如同走进一段云烟的梦幻，我们看到的只是庐山的一峰一岭一丘一壑，却不能辨认庐山的真面目。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/middle/景德镇.jpg" alt="">
+                        <span>“唐朝时期，因为景德镇在 昌江之南 ，故又称昌南镇,到了宋真宗景德元年 （1004年），因镇产 青白瓷 质地优良，遂以 皇帝年号为名置景德镇 ，沿用至今。
+
+                            .
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/middle/江岭.jpg" alt="">
+                        <span>江岭，位于婺源县东北部，距县城45公里，总面积38平方公里，每当春暖花开时，置身于江岭万亩梯田中，黄灿灿的油菜花与远山、近水、粉墙、黛瓦相映成趣，构成一幅天人合一的画卷，在这里您可以尽情的释放，让心灵自由飞翔。
+                        </span>
+                    </li>
+                    <h2>上 饶中国经典山水，世界遗产名城</h2>
+                    <li>
+                        <img src="./江西/bottom/委源篁岭.jpg" alt="">
+                        <span>如果你错过了这里的春天，那一定不能再错过这里的秋天，人间烟火抚人心。篁岭一晒，便已知秋。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/bottom/彩虹桥.jpg" alt="">
+                        <span>彩虹桥，是古徽州最古老、最长的廊桥，被众多媒体誉为“中国最美的廊桥之一”。 彩虹桥的魅力，不仅在于桥体与青山、碧水、古村、驿道的完美结合，而且更重要的体现在建造的生命力
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/bottom/李坑.jpg" alt="">
+                        <span>“天青色等烟雨，而我在等你”。这里犹如世外桃源一般，来这里看看千年的瓷宫，听一听这里的故事。
+                        </span>
+                    </li>
+                    <li>
+                        <img src="./江西/bottom/江湾.jpg" alt="">
+                        <span>古镇江湾，位于锦峰绣岭、清溪碧河之中。聚落北部后龙山逶迤东去，山上林木葱郁，其“仙人桥”是古人实践风水理论的杰出典范
+                        </span>
+                    </li>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../pic.js"></script>
+</body>
+</html>

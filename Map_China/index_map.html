@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可视化大屏</title>
+  <script src="./js/jQuery.min.js"></script>
+  <script src="./js/flexible.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    *{
+      color: #00FFFF;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1 style="letter-spacing: 6px;">旅游数据可视化</h1>
+      <div class="top_time">
+        <span>当前时间：</span>
+        <p></p>
+      </div>
+    </header>
+    <main>
+      <div id="left">
+        <!-- 640*503 -->
+        <div class="left_one">
+          <div class="lo_con">
+            
+          </div>
+          <div class="footer"></div>
+        </div>
+        <div class="left_two">
+          <div class="lt_con"></div>
+          <div class="footer"></div>
+        </div>
+        <div class="left_three">
+          <div class="lth_con"></div>
+          <div class="footer"></div>
+        </div>
+      </div>
+      <div id="center"> 
+        <div class="weather_box">
+          <div class="weather_pic">
+            <li><img src="./images/w1.png" alt=""></li>
+            <li><img src="./images/w0.png" alt=""></li>
+            <li><img src="./images/w2.png" alt=""></li>
+            <li><img src="./images/w3.png" alt=""></li>
+            <li><img src="./images/w0.png" alt=""></li>
+            <li><img src="./images/w2.png" alt=""></li>
+            <li><img src="./images/w1.png" alt=""></li>
+          </div>
+          <div class="weather">
+          </div>
+        </div>
+        <div class="map">
+          <div class="map_bg1"></div>
+          <div class="map_bg2"></div>
+          <div class="map_bg3"></div>
+          <div class="china"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/china.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    $(function () {
+      var t = null;
+      t = setTimeout(This_date, 1000)
+      function This_date() {
+        clearTimeout(t)
+        // 清除定时器
+
+        var Dt = new Date()
+        var year = Dt.getFullYear()
+        var month = Dt.getMonth() + 1
+        var dates = Dt.getDate()
+
+        function times() {
+          var house = Dt.getHours()
+          house = house < 10 ? '0' + house : house
+          var minutes = Dt.getMinutes()
+          minutes = minutes < 10 ? '0' + minutes : minutes
+          var seconds = Dt.getSeconds()
+          seconds = seconds < 10 ? '0' + seconds : seconds
+
+          return house + '时' + minutes + '分' + seconds + '秒'
+        }
+        $('#wrapper header .top_time p')[0].innerHTML = year + '年' + month + '月' + dates + '日' + times()
+        setTimeout(This_date, 1000)
+        // 设定定时器，循环运行
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpLoad</title>
+  <link rel="stylesheet" href="./upload.css">
+</head>
+
+<body>
+  <div class="upload_warp">
+    <div class="upload">
+      <div class="up_content">
+        <input type="text" class="up_text" placeholder="文案">
+
+        <!-- 上传图片区 -->
+        <div class="productImg">
+          <!-- 上传图片区域 -->
+          <div id="uploadBox">
+          </div>
+          <!-- 点击上传区域 -->
+          <div class="uploadDIv" id="uploadImg">
+            <span>+</span>
+            <input type="file" name="file" multiple id="inputs" accept="image/*" class='fileTest' multiple="multiple" />
+          </div>
+        </div>
+      </div>
+      <button id="upend">发布</button>
+    </div>
+    <header>
+      <div class="logo">
+        <img src="./img/logo1.png" alt="">
+      </div>
+      
+      <h2>动态发布</h2>
+      <div class="up">
+        <button id="up_start">+</button>
+      </div>
+    </header>
+    <div class="content">
+      <aside>
+        <div class="aside_photo">
+          <img src="./img/photo.jpg" alt="">
+        </div>
+        <ul>
+          <li id="state">动态</li>
+          <li id="footprint">足迹</li>
+          <li id="classify">分类</li>
+        </ul>
+      </aside>
+      <article>
+        <main>
+          <div class="main_con">
+            <ul>
+              <li class="new_update">
+
+              </li>
+              <li>
+                <!-- 头像 -->
+                <div class="photo">
+                  <img src="./img/photo.jpg" alt="">
+                  <span>又是清明雨上 折菊寄到你身旁
+                    把你最爱的歌来轻轻唱........</span>
+                </div>
+                <div class="li_con">
+                  <img src="img/x12.png" alt="">
+                  <img src="img/x13.png" alt="">
+                  <img src="img/x14.png" alt="">
+                </div>
+              </li>
+              <li>
+                <!-- 头像 -->
+                <div class="photo">
+                  <img src="./img/photo.jpg" alt="">
+                  <span>冉冉檀香透过窗心事我了然
+                    宣纸上走笔至此搁一半........</span>
+                </div>
+                <div class="li_con">
+                  <img src="img/x15.png" alt="">
+                  <img src="img/x16.png" alt="">
+                  <img src="img/x17.png" alt="">
+                </div>
+              </li>
+              <li>
+                <!-- 头像 -->
+                <div class="photo">
+                  <img src="./img/photo.jpg" alt="">
+                  <span>我在人间彷徨 寻不到你的天堂
+                    东瓶西镜放 恨不能遗忘........</span>
+                </div>
+                <div class="li_con">
+                  <img src="img/x16.png" alt="">
+                  <img src="img/x12.png" alt="">
+                  <img src="img/x17.png" alt="">
+                </div>
+              </li>
+              <li>
+                <!-- 头像 -->
+                <div class="photo">
+                  <img src="./img/photo.jpg" alt="">
+                  <span>庐州月光，洒在心上
+
+                    月下的你不复当年模样
+
+                    太多的伤，难诉衷肠........</span>
+                </div>
+                <div class="li_con">
+                  <img src="img/x14.png" alt="">
+                  <img src="img/x13.png" alt="">
+                  <img src="img/x16.png" alt="">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </article>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(function () {  
+      var img = []; //创建一个空对象用来保存传入的图片
+      var AllowImgFileSize = '101376'; //1兆
+
+      $("#inputs").change(function () { // 当 input:file 发生改变时
+        var fil = this.files;
+        // console.log('打印this', this)
+        // console.log('打印this.files', this.files)
+        for (var i = 0; i < fil.length; i++) {
+          var curr = $('#inputs')[i].files[0].size;
+          if (curr > AllowImgFileSize * 101376) { //当图片大于1兆提示
+            layer.msg("图片文件大小超过限制 请上传小于99M的文件");
+          } else {
+            // 调用reads() 函数
+            reads(fil[i]);
+            img.push($('#inputs')[i].files[0]); //将传入的图片push到空对象中
+          }
+        }
+        if (img.length >= 6) { //判断图片的数量，数量不能超过3张
+          $('.uploadDIv').hide();
+        } else {
+          $('.uploadDIv').show();
+        }
+      });
+
+
+      function reads(fil) {
+        var reader = new FileReader();
+        reader.readAsDataURL(fil);
+        // onload 文件读取成功时触发
+        reader.onload = function () {
+          document.getElementById("uploadBox").innerHTML +=
+            '<img src=" ' + reader.result + ' " alt="">'
+        }
+      }
+
+      // 点击开始发布
+      var up_start = document.getElementById('up_start')
+      var upload = document.querySelector('.upload')
+      up_start.addEventListener('click',function(){
+        // upload.style.backgroundColor = '#ccc';
+        upload.style.top = '50px';
+      })
+
+      // 点击发布功能
+      $('#upend').bind('click', function () {
+        var txt = []
+        var inner = []
+        inner.push($('#uploadBox')[0].innerHTML.trim())
+        txt.push($('.up_text')[0].value.trim())
+
+        if(txt[0] !== '' || inner[0] !== ''){
+          console.log(txt[0])
+          $('.new_update')[0].innerHTML = '<div class="photo">'+
+          '<img src="./img/photo.jpg" alt="">'+
+          '<span>'+txt[0]+'</span>'+
+        '</div>'+
+        '<div class="li_con">'+inner[0]+'</div>'
+        }
+
+        $('.up_text')[0].value = ''
+        $('#uploadBox')[0].innerHTML = ''
+        upload.style.top = '-300px';
+      })
+    })
+
+
+
+  </script>
+</body>
+
+</html>
+
+
+
+

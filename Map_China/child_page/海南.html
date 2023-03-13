@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./child.css">
+    <style>
+        body {
+            background-image: url(./bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="warp_redTour">
+        <div class="pro1 privence" id="江西">
+            <header>
+                <h1>天涯海角，南国风情--海南！</h1>
+            </header>
+            <main>
+                <div class="top">
+                    <li><img src="./top/亚特兰蒂斯水世界.jpg" alt=""></li>
+                    <li><img src="./top/南山文化旅游区.jpg" alt=""></li>
+                    <li><img src="./top/后海村.jpg" alt=""></li>
+                    <li><img src="./top/天涯镇.jpg" alt=""></li>
+                    <li><img src="./top/蜈支洲岛.jpg" alt=""></li>
+                    <li><img src="./top/西岛.jpg" alt=""></li>
+                </div>
+                <div class="bot">
+                    <div class="right">
+                        <h2>三亚——东方的夏威夷</h2>
+                        <li>
+                            <img src="./middle/吉庆广场.jpg" alt="">
+                            <span>吉庆广场起点是一个欧洲教堂，教堂前还有草坪和盛开的粉色花朵，氛围十分浪漫。几百米的一条街，基本没有当地人，来着的都是拍照的团队或者游客。
+                            </span>
+                        </li>
+                        <li>
+                            <img src="./middle/大东旅游区.jpg" alt="">
+                            <span>大东海旅游名胜区位于三亚市东郊，距三亚镇3公里，与榆林港毗邻，在兔尾岭和鹿回头两个山头中间，是一个自然形成的半月形浅水海湾。水面是月牙形的沙滩，南面是浩渺无边的大海，是一个不可多得的滨海游览区。
+                            </span>
+                        </li>
+                        <li>
+                            <img src="./middle/太阳湾沿海公路.jpg" alt="">
+                            <span>要说三亚哪条公路最美、最适合自驾游，那肯定要数太阳湾公路了，这里被称为“最美沿海公路”，不管是骑行还是自驾游，在这条公路上走上一趟，被路两边的大海和青山折服。
+
+
+                            </span>
+                        </li>
+                        <li>
+                            <img src="./middle/鹿回头.jpg" alt="">
+                            <span>鹿回头风景区坐落在三亚市西南端鹿回头半岛内，共有大小五座山峰，最高海拔181米。公园三面环海，一面毗邻三亚市区，是登高望海、观看日出日落与俯瞰三亚市全景的佳处。
+                            </span>
+                        </li>
+                        <h2>碧海连天远，琼崖尽是春。</h2>
+                        <li>
+                            <img src="./bottom/三亚千古情.jpg" alt="">
+                            <span>鹿回头风景区坐落在三亚市西南端鹿回头半岛内，共有大小五座山峰，最高海拔181米。公园三面环海，一面毗邻三亚市区，是登高望海、观看日出日落与俯瞰三亚市全景的佳处。
+                            </span>
+                        </li>
+                        <li>
+                            <img src="./bottom/大小洞天.jpg" alt="">
+                            <span>大小洞天始创于南宋，因其奇特秀丽的海景、山景、石景与洞景，为当时的知军毛奎游访开发而得名。它是海南省历史最悠久的景点，被誉为“琼崖八百年第一山水名胜”，也是中国最南端的道家文化旅游胜地。
+                        </li>
+                        <li>
+                            <img src="./bottom/椰梦长廊.jpg" alt="">
+                            <span>沙滩坡度平缓，曲线优美，海水清澈见底。冬可避寒、夏能消暑，是以热带海洋风光，中国传统文化、南国民族风情为特点的国际一流避寒和休闲度假胜地。
+                            </span>
+                        </li>
+                        <li>
+                            <img src="./bottom/槟榔谷.jpg" alt="">
+                            <span> 槟榔谷可以说是海南黎苗少数民族文化的“活化石”，看旖旎雨林风光、感受自然气息、领略民族风情。
+                            </span>
+                        </li>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        const top_li = document.querySelectorAll('.privence main .top li')
+        const top_span = document.querySelectorAll('.privence main .top li span')
+
+        var bot_li = document.querySelectorAll('.privence main .bot .right li')
+        var bot_li_img = document.querySelectorAll('.privence main .bot .right li img')
+        var bot_span = document.querySelectorAll('.privence main .bot .right li span')
+
+        for (let i = 0; i < top_li.length; i++) {
+            top_li[i].addEventListener('mousemove', function () {
+                top_span[i].style.bottom = '20%'
+            })
+            top_li[i].addEventListener('mouseout', function () {
+                top_span[i].style.bottom = '-50%'
+            })
+
+        }
+
+        for (let i = 0; i < bot_li.length; i++) {
+            bot_li[i].addEventListener('mousemove', function () {
+                bot_li_img[i].style.transform = 'scale(1.2)'
+                bot_span[i].style.color = '#fff'
+                bot_span[i].style.backgroundColor = 'rgba(0, 0, 0,.3)'
+            })
+
+            bot_li[i].addEventListener('mouseout', function () {
+                bot_li_img[i].style.transform = ''
+                bot_span[i].style.color = 'rgba(255, 255, 255,0)'
+                bot_span[i].style.backgroundColor = ''
+            })
+        }
+    </script>
+</body>
+
+</html>

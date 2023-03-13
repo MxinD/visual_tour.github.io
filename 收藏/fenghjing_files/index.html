@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>推荐页面</title>
+<style>
+  	*{
+		margin: 0;
+		padding: 0;
+    list-style: none;
+	}
+	ul{
+		list-style: none;
+	}
+	a{
+        text-decoration: none;
+    }
+	#container{
+		position: relative;
+		width: 100%;
+		height: 400px;
+		margin: 0 auto;
+		overflow: hidden; /*溢出隐藏：只显示一张图片*/
+	}
+	#container .parent{
+		position: absolute;
+		width: 2500px; /*整个图片层长度：500*5=2500*/
+		height: 400px;
+	}
+	
+	#container .parent li{
+		float: left;
+		width: 500px;
+		height: 100%;
+	}
+	#container .parent li img{
+		width: 100%;
+		height: 100%;
+	}
+	#container .btnLeft,
+	#container .btnRight{
+		width: 30px;
+	    height: 30px;
+	    background-color: #353333;
+	    border-radius: 20%;
+	    opacity: 80%;
+	    position: absolute; /*包含块为图片显示层container*/
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    font-size: 20px;
+   	 	color: #f40;
+   	 	text-align: center;
+   	 	line-height: 30px;
+	}
+	#container .btnLeft{
+	    left: 10px;
+	}
+	#container .btnRight{
+		right: 10px;
+	}
+	#container .btnLeft:hover,
+	#container .btnRight:hover{
+		opacity: 90%;
+		cursor: pointer;
+	}
+	/*蒙层*/
+	#container .modal{
+		width: 100%;
+		height: 40px;
+		background: rgba(0,0,0,.3);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		line-height: 40px;
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
+	#container .modal .title{
+		float: left;
+		color: rgb(255, 255, 255);
+		font-size: 12px;
+	}
+	#container .modal .dots{
+		float: right;
+		position: absolute;
+   
+   
+		bottom: 30%;
+		left: 45%;
+	}
+	#container .modal .dots li{
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		float: left;
+		margin: 0 5px;
+		cursor: pointer;
+	}
+
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.on{
+		background-color: red;
+	}
+	.off{
+		background-color: gray;
+	}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* 头部样式 */
+.header {
+  background-color: #f1f1f1;
+  text-align: center;
+  height: auto;
+}
+
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(149, 146, 112);
+}
+
+/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: rgb(157, 73, 73);
+}
+
+/* 创建列 */
+.column_lift {
+  float: left;
+  width: 20%;
+  height: 600px;
+  margin: 25px;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 5px #908c8c;
+
+}
+.column_lift_1{
+  background-color: rgb(221, 221, 221);
+  color: rgb(157, 73, 73);
+  margin: 20px;
+  background-color: #e5ead5;
+  box-shadow: 10px 10px 5px #908c8c;
+}
+.column_right{
+    float: left;
+  width: 70%;
+  margin: 25px;
+
+}
+.column_right_1{
+    float: left;
+  width: 91%;
+  height: 25%;
+  margin: 25px;
+  background-color: #e6efdb;
+  box-shadow: 10px 10px 5px #908c8c;
+
+}
+.right_txt{
+  width: 100px;
+  margin: 25px;
+}
+.right_e{
+  width: 100px;
+  margin: 25px;
+  float: left;
+}
+.right_info{
+  width: 400px;
+  
+  margin: 25px;
+  float: left;
+}
+
+/* 列后清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ 
+/* 响应式布局 - 小于 600 px 时改为上下布局 */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div id="container">
+    <ul class="parent" style="left: 0;">
+      <li><img src="1.jpg"></li>
+      <li><img src="2.png"></li>
+      <li><img src="1.jpg"></li>
+      <li><img src="2.png"></li>
+      <li><img src="1.jpg"></li>
+    </ul>
+  
+    <div class="btnLeft">&lt;</div>
+    <div class="btnRight">&gt;</div>
+    <div class="modal">
+      <div class="title">
+      </div>
+      <div class="dots">
+        <ul class="clearfix" >
+          <li class="on"></li>
+          <li class="off"></li>
+          <li class="off"></li>
+          <li class="off"></li>
+          <li class="off"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="topnav">
+  <a class="t">推荐：</a>
+  <a href="#">影视</a>
+  <a href="#">人物</a>
+  <a href="#">景点</a>
+  <a href="#">美食</a>
+</div>
+
+<div class="row">
+  <div class="column_lift">
+    <div class="column_lift_1">
+     <a href="#影视" >
+      <p align="center">经典影视</p>
+    </a>
+    </div>
+    <div class="column_lift_1">    
+      <a href="#名人" >
+        <p align="center">名人简介</p>
+      </a>
+    </div>
+    <div class="column_lift_1">
+          <a href="#景点">
+            <p align="center">风景概览</p>
+          </a>
+        </div>
+    <div class="column_lift_1">
+          <a href="#美食">
+            <p align="center">美食推荐</p>
+          </a>
+        </div>
+
+  </div>
+  <div class="column_right">
+    <div id="影视" class="column_right_1">
+      <div class="right_txt">
+        <p>经典影视</p>
+      </div>
+      <ol>
+        <li>
+          <div class="right_e">
+          <img width="100" src="图片素材/1.webp">
+        </div>
+        <div class="righ_info">
+          <h1>泰坦尼克号 Titanic (1997)</h1>
+          <p>导演: 詹姆斯·卡梅隆</p>
+          <p>编剧: 詹姆斯·卡梅隆</p>
+          <p>主演: 莱昂纳多·迪卡普里奥 / 凯特·温丝莱特 / 比利·赞恩 / 凯西·贝茨 / 弗兰西丝·费舍 等</p>
+          <p>类型: 剧情 / 爱情 / 灾难</p>
+          <p>制片国家/地区: 美国 / 墨西哥 / 澳大利亚 / 加拿大</p>
+          <p>语言: 英语 / 意大利语 / 德语 / 俄语</p>
+          <p>上映日期: 1998-04-03(中国大陆) / 1997-11-01(东京电影节) / 1997-12-19(美国)</p>
+          <br>
+        </div>
+      </li>
+        <li><div class="right_e"><img width="100" src="图片素材/2.webp"></div>
+          <div class="righ_info">
+            <h1>楚门的世界 The Truman Show (1998)</h1>
+            <p>导演: 彼得·威尔<br>
+              编剧: 安德鲁·尼科尔<br>
+              主演: 金·凯瑞 / 劳拉·琳妮 / 艾德·哈里斯 / 诺亚·艾默里奇 / 娜塔莎·麦克艾霍恩<br>
+              类型: 剧情 / 科幻<br>
+              制片国家/地区: 美国<br>
+              语言: 英语<br>
+              上映日期: 1998-06-05(美国)<br></p>
+            <br>
+          </div>
+        </li>
+        <li><div class="right_e"><img width="100" src="图片素材/3.webp"></div>        <div class="righ_info">
+          <h1>肖申克的救赎 The Shawshank Redemption (1994)</h1>
+          <p>导演: 弗兰克·德拉邦特<br>
+            编剧: 弗兰克·德拉邦特 / 斯蒂芬·金<br>
+            主演: 蒂姆·罗宾斯 / 摩根·弗里曼 / 鲍勃·冈顿 / 威廉姆·赛德勒 / 克兰西·布朗 <br>
+            类型: 剧情 / 犯罪<br>
+            制片国家/地区: 美国<br>
+            语言: 英语<br>
+            上映日期: 1994-09-10(多伦多电影节) / 1994-10-14(美国)<br></p>
+          <br>
+        </div></li>
+        <li><div class="right_e"><img width="100" src="图片素材/4.webp"></div>        <div class="righ_info">
+          <h1>辛德勒的名单 Schindler's List (1993)</h1>
+          <p>导演: 史蒂文·斯皮尔伯格<br>
+            编剧: 托马斯·肯尼利 / 斯蒂文·泽里安<br>
+            主演: 连姆·尼森 / 本·金斯利 / 拉尔夫·费因斯 / 卡罗琳·古多尔 / 乔纳森·萨加尔 <br>
+            类型: 剧情 / 历史 / 战争<br>
+            制片国家/地区: 美国<br>
+            语言: 英语 / 希伯来语 / 德语 / 波兰语<br>
+            上映日期: 1993-11-30(华盛顿首映) / 1994-02-04(美国)<br></p>
+
+          <br>
+        </div></li>
+        <li><div class="right_e"><img width="100" src="图片素材/5.webp"></div>        <div class="righ_info">
+          <h1>这个杀手不太冷 Léon (1994)</h1>
+          <p>导演: 吕克·贝松  <br>
+            编剧: 吕克·贝松  <br>
+            主演: 让·雷诺 / 娜塔莉·波特曼 / 加里·奥德曼 / 丹尼·爱罗 / 彼得·阿佩尔  <br>
+            类型: 剧情 / 动作 / 犯罪 <br>
+            制片国家/地区: 法国 / 美国 <br>
+            语言: 英语 / 意大利语 / 法语 <br>
+            上映日期: 1994-09-14(法国) <br></p>
+
+          <br>
+      </ol>
+    </div>
+    <div id="名人" class="column_right_1">
+      <div class="right_txt">
+        <p>名人简介</p>
+      </div>
+    <ol>
+      <li>
+        <div class="right_e">
+        <img width="100" src="图片素材/人物1.jpg">
+      </div>
+      <div class="righ_info">
+        <h1>胡适(1891年12月17日~1962年2月24日)</h1>
+  <p>男</p>
+  <p>编剧: 詹姆斯·卡梅隆</p>
+  <p>曾用名嗣穈，字希疆，学名洪骍，后改名适，字适之</p>
+  <p>类型: 剧情 / 爱情 / 灾难</p>
+  <p>思想家、文学家、哲学家。安徽绩溪人，以倡导"白话文"、领导新文化运动闻名于世</p>
+  <p></p>
+  <p></p>
+  <br>
+        <br>
+      </div>
+    </li>
+    <li>
+      <div class="right_e">
+      <img width="100" src="图片素材/人物2.jpg">
+    </div>
+    <div class="righ_info">
+      <h1>蔡元培（1868年1月11日－1940年3月5日）</h1>
+      <p>字鹤卿，又字仲申、民友、孑民，乳名阿培，并曾化名蔡振、周子余
+      汉族，浙江绍兴山阴县（今浙江绍兴）人</p>
+      <p>革命家、教育家、政治家。民主进步人士，国民党中央执委、国民政府委员兼监察院院长。中华民国首任教育总长。</p>
+      <p>1916年至1927年任北京大学校长，革新北大开“学术”与“自由”之风；1920年至1930年，蔡元培同时兼任中法大学校长。他早年参加反清朝帝制的斗争，民国初年主持制定了中国近代高等教育的第一个法令——《大学令》。北伐时期，国民政府奠都南京后，他主持教育行政委员会、筹设中华民国大学院及中央研究院，主导教育及学术体制改革。1927年参与发起“护国救党运动”，认为应当清党但反对杀人。1928年至1940年专任中央研究院院长，贯彻对学术研究的主张。蔡元培数度赴德国和法国留学、考察，研究哲学、文学、美学、心理学和文化史，为他致力于改革封建教育奠定思想理论基础。1940年3月5日在香港病逝。葬香港仔山巅华人公墓。</p>
+
+      <br>
+    </div>
+  </li>
+  <li>
+    <div class="right_e">
+    <img width="100" src="图片素材/人物3.jpg">
+  </div>
+  <div class="righ_info">
+    <h1>梁启超（1873年2月23日—1929年1月19日）</h1>
+    <p>字卓如，一字任甫，号任公，又号饮冰室主人、饮冰子、哀时客</p>
+    <p>中国近代思想家、政治家、教育家、史学家、文学家。戊戌变法（百日维新）领袖之一、中国近代维新派、新法家代表人物。
+    </p>
+    <p>维新变法前，与康有为一起联合各省举人发动“公车上书”运动，此后先后领导北京和上海的强学会，又与黄遵宪一起办《时务报》，任长沙时务学堂的主讲，并著《变法通议》为变法做宣传。 戊戌变法失败后，与康有为一起流亡日本政治思想上逐渐走向保守，但是他是近代文学革命运动的理论倡导者。逃亡日本后，梁启超在《饮冰室合集》、《夏威夷游记》中继续推广“诗界革命”，批判了以往那种诗中运用新名词以表新意的做法。在海外推动君主立宪。辛亥革命之后一度入袁世凯政府，担任司法总长；之后对袁世凯称帝、张勋复辟等严词抨击，并加入段祺瑞政府。
+    </p>
+
+  </div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/人物4.jpg">
+</div>
+<div class="righ_info">
+  <h1>陆小曼</h1>
+  <p>名眉，别名小眉、小龙，江苏常州人，近代女画家</p>
+  <p>师从刘海粟、陈半丁、贺天健等名家，晚年被吸收为上海中国画院专业画师。曾参加新中国第一次和第二次全国画展。陆小曼擅长戏剧，曾与徐志摩合作创作五幕话剧《卞昆冈》。她还谙昆曲，也能演皮黄，写得一手好文章，有深厚的古文功底和扎实的文字修饰能力。因与徐志摩的婚恋而成为著名近代人物。1965年4月3日于上海华东医院逝世，享年62岁。</p>
+<br>
+<br>
+<br>
+</div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/人物5.png">
+</div>
+<div class="righ_info">
+  <h1>林徽因(1904年6月10日-1955年4月1日)</h1>
+  <p>女</p>
+  <p>汉族，福建闽县(福州)人，出生于浙江杭州</p>
+  <p>原名林徽音，其名出自“《诗·大雅·思齐》：大姒嗣徽音，则百斯男”。后因常被人误认为当时一男作家“林微音”，故改名“徽因”</p>
+
+  <p>中国著名女建筑师、诗人和作家，人民英雄纪念碑和中华人民共和国国徽深化方案的设计者之一、建筑师梁思成的第一任妻子。二十世纪三十年代初，同梁思成一起用现代科学方法研究中国古代建筑，成为这个学术领域的开拓者</p>
+  <p></p>
+  <p></p>
+  <br>
+</div>
+</li>
+
+    </ol>
+
+
+    </div>
+    <div id="景点" class="column_right_1">    
+      <div class="right_txt">
+        <p>风景概览</p>    
+      </div>
+ <ol>
+  <li>
+    <div class="right_e">
+    <img width="100" src="图片素材/ly1.jpg">
+  </div>
+  <div class="righ_info">
+    <h1>布达拉宫</h1>
+    <br>
+    <p>布达拉宫位于中国西藏自治区首府拉萨市区西北的玛布日山上，是一座宫堡式建筑群，最初是吐蕃王朝赞普松赞干布为迎娶尺尊公主和文成公主而兴建 [17]  [24]  。于17世纪重建后，成为历代达赖喇嘛的冬宫居所，为西藏政教合一的统治中心。1961年，布达拉宫成为了中华人民共和国国务院第一批全国重点文物保护单位之一。1994年，布达拉宫被列为世界文化遗产。布达拉宫的主体建筑为白宫和红宫两部分。
+      整座宫殿具有藏式风格，高200余米，外观13层，实际只有9层。由于它起建于山腰，大面积的石壁又屹立如峭壁，使建筑仿佛与山岗融为一体，气势雄伟。</p>
+      <br>
+    <br>
+  </div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/ly2.jpg">
+</div>
+<div class="righ_info">
+  <h1>四川乐山大佛</h1>
+  <br>
+  <p>乐山大佛，又名凌云大佛，位于四川省乐山市南岷江东岸凌云寺侧，濒大渡河、青衣江和岷江三江汇流处。大佛为弥勒佛坐像，通高71米，是中国最大的一尊摩崖石刻造像。
+    乐山大佛开凿于唐代开元元年（713年），完成于贞元十九年（803年），历时约九十年。
+    乐山大佛和凌云山、乌尤山、巨形卧佛等景点组成的乐山大佛景区属于国家5A级旅游景区， [1]  是世界文化与自然双重遗产峨眉山-乐山大佛的组成部分。</p>
+    <br>
+    <br>
+  <br>
+</div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/ly3.jpg">
+</div>
+<div class="righ_info">
+  <h1>秦始皇陵兵马俑</h1>
+
+  <p>兵马俑，即秦始皇陵兵马俑，亦简称秦兵马俑或秦俑，是第一批全国重点文物保护单位、第一批中国世界遗产，位于今陕西省西安市临潼区秦始皇陵以东1.5千米处的兵马俑坑内。
+    兵马俑是古代墓葬雕塑的一个类别。古代施行人殉，奴隶是奴隶主生前的附属品，奴隶主死后奴隶要作为殉葬品为奴隶主陪葬。兵马俑即制成兵马（战车、战马、士兵）形状的殉葬品。 [1] 
+    1961年3月4日，秦始皇陵被国务院公布为第一批全国重点文物保护单位 [2]  。1974年3月，兵马俑被发现。1987年，秦始皇陵及兵马俑坑被联合国教科文组织批准列入《世界遗产名录》，被誉为“世界第八大奇迹” [3]  ，先后有200多位外国元首和政府首脑参观访问，成为中国古代辉煌文明的一张金字名片，又被誉为世界十大古墓稀世珍宝之一。</p>
+
+  <br>
+</div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/ly4.jpg">
+</div>
+<div class="righ_info">
+  <h1>北京故宫</h1>
+  <br>
+  <p>北京故宫博物院是一座中国综合性博物馆，也是中国最大的古代文化艺术博物馆、第一批全国爱国主义教育示范基地、世界三大宫殿之一 [1-2]  、全国未成年人思想道德建设工作先进单位 [3]  ；其建立于1925年10月10日，位于北京故宫紫禁城内，收藏品包括但不限于明朝、清朝两代皇宫及其收藏。</p>
+  <br><br><br>
+  <br>
+</div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/ly5.jpg">
+</div>
+<div class="righ_info">
+  <h1>香港</h1>
+  <p>香港（Hong Kong），简称“港”，全称中华人民共和国香港特别行政区，位于中国南部、珠江口以东，西与澳门隔海相望，北与深圳相邻，南临珠海万山群岛，区域范围包括香港岛、九龙、新界和周围262个岛屿，陆地面积1113.8平方千米（2021年） [132]  ，海域面积1648.69平方千米。截至2020年末，总人口747.42万人，是世界上人口密度最高的地区之一，人均寿命全球第一，人类发展指数全球第四。</p>
+  <p>香港是一座高度繁荣的自由港和国际大都市，与纽约、伦敦并称为“纽伦港”，是全球第三大金融中心，重要的国际金融、贸易、航运中心和国际创新科技中心，也是全球最自由经济体和最具竞争力城市之一，在世界享有极高声誉，被GaWC评为世界一线城市第三位。</p>
+
+  <br>
+</div>
+</li>
+ </ol>
+    
+  
+</div>  
+    <div id="美食" class="column_right_1">
+      <div class="right_txt">
+        <p>美食推荐</p>
+      </div>
+      <ol>
+      <li>
+        <div class="right_e">
+        <img width="100" src="图片素材/小吃1.jpg">
+      </div>
+      <div class="righ_info">
+        <h1>胡辣汤</h1>
+        <p></p>
+        <br>
+
+        <p></p>
+        <p>汤味浓郁、汤色靓丽、汤汁粘稠，香辣可口，十分适合配合其它早点进餐。目前，已经发展成为河南及陕西等周边省份都喜爱和知晓的小吃之一。</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <br>
+      </div>
+    </li>
+    <li>
+      <div class="right_e">
+      <img width="100" src="图片素材/小吃2.jpg">
+    </div>
+    <div class="righ_info">
+      <h1>羊肉泡馍</h1>
+      <br>
+      <p>羊肉泡馍是陕西的风味美食，尤以西安最享盛名。它烹制精细，料重味醇，肉烂汤浓，肥而不腻，营养丰富，香气四溢，诱人食欲，食后回味无穷。素为西安和西北地区各族人民所喜爱。</p>
+      <br>
+      <br>
+    </div>
+  </li>
+  <li>
+    <div class="right_e">
+    <img width="100" src="图片素材/小吃3.jpg">
+  </div>
+  <div class="righ_info">
+    <h1>汤圆</h1>
+    <br>
+    <p>汤圆是浙江宁波著名的特色小吃之一，也是中国的代表小吃之一，春节，元宵节节日食俗；即用黑芝麻、猪脂肪油、少许白砂糖做馅，外面用糯米粉搓成球，煮熟后，吃起来香甜可口，饶有风趣。</p>
+    <br>
+    <br>
+  </div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/小吃4.jpg">
+</div>
+<div class="righ_info">
+  <h1>桂林米粉</h1>
+  <br> 
+  <p>桂林米粉是广西桂林地区历史悠久的特色传统名小吃，以其独特的风味远近闻名；洁白、细嫩、软滑、爽口，其吃法多样。</p>
+  <br> <br>
+  <br>
+</div>
+</li>
+<li>
+  <div class="right_e">
+  <img width="100" src="图片素材/小吃5.jpg">
+</div>
+<div class="righ_info">
+  <h1>重庆火锅</h1>
+  <br> 
+  <p>重庆老火锅是川渝地区传统美食之一，以麻辣为主，咸鲜、酸辣味兼有，分清汤火锅、红汤火锅和鸳鸯火锅。它以调汤考究见长，具有原料多样，荤素皆可，适应广泛，风格独特，场面热烈等特色，因而最热辣山城。</p>
+  <br> <br> 
+  <br>
+</div>
+</li>
+      </ol>
+     
+   
+</div>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+	
+  var imgShow = document.getElementsByClassName('parent')[0],
+    dotList = document.querySelectorAll('.dots >.clearfix > li');
+  var btnLeft = document.getElementsByClassName('btnLeft')[0],
+      btnRight = document.getElementsByClassName('btnRight')[0];
+  var dotLen = dotList.length,
+    index = 0; //轮播层的图片索引，0表示第一张
+  
+  //圆点显示
+  function showRadius() {
+    for(var i = 0; i < dotLen; i++) {
+      if(dotList[i].className === "on"){
+        dotList[i].className = "off";
+      }
+    }
+    dotList[index].className = "on";
+  }
+  
+  //向左移动
+  btnLeft.onclick = function() {
+    index--;
+      if(index < 0){  /*第1张向左时，变为第5张*/
+          index = 4;
+      }
+      showRadius();
+    var left;
+    var imgLeft = imgShow.style.left;
+    if(imgLeft === "0px") { /*当是第1张时，每张图片左移，移4张图，位置为-(4*500)*/
+      left = -2000;
+    }
+    else{
+      left = parseInt(imgLeft) + 500; /*由于left为负数，每左移一张加500*/
+    }
+    imgShow.style.left = left + "px";
+  }
+  
+  //向右移动
+  btnRight.onclick = function() {
+    index++;
+      if(index > 4){  /*第5张向右时，变为第1张*/
+          index = 0;
+      }
+      showRadius();
+    var right;
+    var imgLeft = imgShow.style.left;
+    if(imgLeft === "-2000px") { /*当是第5张时，第1张的位置为0*/
+      right = 0;
+    }
+    else{
+      right = parseInt(imgLeft) - 500; /*由于left为负数，每右移一张减500*/
+    }
+    imgShow.style.left = right + "px";
+  }
+  
+  // 自动轮播
+  /*var timer;
+  function autoPlay() {
+    timer = setInterval(function() {
+      var right;
+      var imgLeft = imgShow.style.left;
+      if(imgLeft === "-2000px") {
+        right = 0;
+      }
+      else{
+        right = parseInt(imgLeft) - 500;
+      }
+      imgShow.style.left = right + "px";
+    } ,1000)
+  }
+  autoPlay();*/
+  
+  for(var i = 0; i < dotLen; i++) {
+      /*利用闭包传递索引*/
+      (function(i) {
+          dotList[i].onclick = function() {
+            var dis = index - i; //当前位置和点击的距离
+            imgShow.style.left = (parseInt(imgShow.style.left) + dis * 500) + "px";
+            index = i; //显示当前位置的圆点
+            showRadius();
+        }
+      })(i);
+  }
+  
+  </script>
+  
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

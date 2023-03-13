@@ -1,0 +1,91 @@
+body {
+  background-image: url(./00_bg.png);
+  background-size: cover;
+  // background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.logo {
+  width: 700px;
+  height: 500px;
+  // border: 1px solid aqua;
+  margin: 170px auto;
+
+  .left {
+    width: 45%;
+    height: 100%;
+    float: left;
+    background-color: rgba(0, 0, 0,.6);
+    padding: 10px;
+    img{
+      margin-top: 80px;
+      width: 100%;
+    }
+  }
+
+  .right {
+    float: left;
+    width: 55%;
+    height: 500px;
+    padding-left: 10px;
+    // background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(48, 74, 115, 0.8);
+    padding-top: 20px;
+    header{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 10px auto;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    input {
+      background-color: rgba(0, 0, 0, 0);
+      outline: none;
+      border-bottom: 1px solid rgb(183, 198, 252);
+      width: 250px;
+      height: 35px;
+      margin: 20px;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      color: #fff;
+    }
+
+    span {
+      color: aliceblue;
+      font-family: SimSun;
+      line-height: 35px;
+    }
+    .btn{
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 30px;
+      button{
+        background-color: rgba(0, 0, 0, 0);
+        color: aliceblue;
+        font-size: 18px;
+        font-family: SimSun;
+        &:nth-child(1){
+          margin-right: 100px;
+        }
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+      button:hover{
+        background-color: aliceblue;
+        color: black;
+      }
+    }
+  }
+}
